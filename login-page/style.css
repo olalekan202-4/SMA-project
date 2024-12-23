@@ -1,0 +1,161 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(to right, #3851ddda 50%, white 50%);
+}
+
+.main-container {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  gap: 210px;
+  padding: 20px;
+}
+
+.image-container {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 40px;
+  position: relative;
+}
+
+.login-description {
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.89);
+  font-size: 20px;
+  position: absolute;
+  top: 40px;
+  left: 20%;
+
+}
+
+.first-image {
+  margin-top: 0px;
+}
+.second-image {
+  margin-top: 200px
+}
+
+.sub-container {
+  width: 350px;
+  background-color: #d5d9f5;
+  padding: 30px;
+  border: 0px;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.login {
+  font-size: 25px;
+  font-weight:bolder;
+  margin-left: 10px;
+  line-height: 30px;
+}
+
+.enter-details {
+  margin: 0px;
+  margin-left: 10px;
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.email-container, .password-container {
+  position: relative;
+  width: 270px;
+}
+
+.email-icon {
+  position: absolute;
+  top: 11px;
+  left: 20px;
+}
+
+input {
+  padding: 5px;
+  width: 300px;
+  border: 1px solid #3851ddda;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+input::placeholder {
+  font-size: 10px;
+  padding: 20px;
+}
+
+.password-icon-container {
+  position: absolute;
+  top: 11px;
+  left: 20px;
+}
+
+.password-hidden-container {
+  position: absolute;
+  top: 11px;
+  right: -30px;
+}
+
+.login-btn{
+  margin-top: 20px;
+  width: 315px;
+  padding: 10px;
+  color: white;
+  background-color: #3851ddda;
+
+}
+
+.checkbox {
+  padding: 5px;
+  width: 20px;
+  border: 1px solid #3851ddda;
+  border-radius: 5px;
+}
+
+.checkbox-container {
+  position: relative;
+}
+
+.remember-me {
+  font-size: 12px;
+  position: absolute;
+  top: 8px;
+  left: 30px;
+}
+
+.forget-password {
+  margin-left: 60px;
+  text-decoration: none;
+}
+
+.account-reg {
+  text-align: center;
+  font-size: 10px;
+  font-weight: 600;
+}
+
+.sign-up {
+  text-decoration: none;
+}
+
+#hidden-password {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.error {
+  color: rgb(139, 10, 10);
+  margin: 0px 10px;
+  font-size: 12px;
+}
+
+@media screen and (max-width 500px) {
+  body {
+    overflow-x: hidden;
+  }
+}

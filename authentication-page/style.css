@@ -1,0 +1,15 @@
+.container {
+  background-color: #C3C3C3;
+  text-align: center;
+}
+
+.resend-button {
+  margin: 20px;
+  padding: 10px 40px;
+  background-color: #3851DD;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}

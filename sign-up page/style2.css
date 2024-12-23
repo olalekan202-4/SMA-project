@@ -1,0 +1,69 @@
+body {
+  background: linear-gradient(to right, blue 50%, white 50%);
+}
+
+.login1-description {
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.89);
+  font-size: 20px;
+  position: absolute;
+  top: -20px; 
+}
+
+.sign-up-container {
+  position: relative;
+  display: inline-block;
+}
+
+.signup-img {
+  width: 500px;
+  border: 0;
+  /* mix-blend-mode:multiply;
+  opacity: 1; */
+  
+}
+
+.terms {
+  text-decoration: none;
+}
+
+.icon-image {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+select {
+  color: gray;
+  background-color: rgba(255, 255, 255, 0.356);
+  font-size: 12px;
+  padding: 2px;
+  border: 0;
+}
+
+.choose {
+  width: 120px;
+  background-color: white;
+  padding: 5px 10px;
+  color: gray;
+  font-size: 12px;
+  margin-left: 10px;
+  border: 1px solid #3851ddda;
+  border-radius: 5px;
+}
+
+.error {
+  color: rgb(139, 10, 10);
+  margin: 0px 10px;
+  font-size: 12px;
+}
+
+.success {
+  color: green;
+  font-size: 12px;
+  margin: 0px 10px;
+}
+
+#submit {
+  cursor: pointer;
+}

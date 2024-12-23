@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sign Up Page</title>
+  <link rel="stylesheet" href="style2.css">
+  <link rel="stylesheet" href="../login-page/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="main-container">
+    <div class="image-container">
+      <div class="login1-description">
+        Take Control of Your <br>Subcriptions in one Place.
+      </div>
+      <div class="sign-up-container">
+        <img class="signup-img" src="../login-page/IMAGE/sign-up-image.jpg" alt="sign-up">
+      </div>
+    </div>
+    <div class="sub-container">
+      <h1 class="login">Create an Account</h1>
+      <div>
+        <form id="form">
+          <div class="email-container">
+            <div class="email-icon">
+              <img class="password-icon"  src="../login-page/IMAGE/user.png" alt="user" width="10px">
+            </div>
+            <input type="text" name="first-name" placeholder="First Name" id="first-name" class="username">
+          </div>
+          <div class="email-container">
+            <div class="email-icon">
+              <img class="password-icon" src="../login-page/IMAGE/user.png" alt="user" width="10px">
+            </div>
+            <input type="text" name="last-name" placeholder="Last Name" id="last-name" class="username2">
+          </div>
+          <div class="email-container">
+            <div class="email-icon">
+              <img src="../login-page/IMAGE/email-icon.png" alt="email" id="email2-icon" class="email2-icon" width="10px">
+            </div>
+            <input type="email" name="email" placeholder="Email" id="email-2">
+          </div>
+          <div class="choose">
+            <label for="gender">Gender</label>
+            <select name="gender" id="gender">
+              <option value="" disabled selected></option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="password-container">
+            <div class="password-icon-container">
+              <img src="../login-page/IMAGE/password-icon.png" alt="password" id="password-image" width="10px">
+            </div>
+            <div class="password-hidden-container">
+              <img src="../login-page/IMAGE/password-hidden-icon.png" alt="password" class="hidden-password" width="10px">
+            </div>
+            <input type="password" id="password" name="password" placeholder="Password" class="password" required>
+          </div>
+          <div class="password-container">
+            <div class="password-icon-container">
+              <img src="../login-page/IMAGE/password-icon.png" alt="password" id="password2-image"  width="10px">
+            </div>
+            <div class="password-hidden-container">
+              <img src="../login-page/IMAGE/password-hidden-icon.png" alt="password" class="hidden-password2" width="10px">
+            </div>
+            <input type="password" id="confirm-password" name="password" placeholder="Confirm Password" class="password" required>
+          </div>
+          <div class="error" id="error"></div>
+          <!-- <div class="choose">
+            <label for="state">Choose State:</label>
+            <select id="state">
+              <option value="" disabled selected></option>
+            </select>
+          </div> -->
+          <div class="checkbox-container">
+            <input type="checkbox" id="checkbox" name="checkbox" class="checkbox">
+            <label class="remember-me" for="checkbox">By clicking this box you agree to our <a class="terms" href="">Terms and Conditions</a> and Privacy Policy.</label>
+          </div>
+          <div>
+            <input class="login-btn" type="submit" value="Sign-Up" id="submit">
+          </div>
+        </form>
+
+        <div>
+          <div>
+            <p class="account-reg">Already have an account <a class="sign-up" href="../login-page/index.html">Login</a></p>
+            <p class="account-reg">Or</p>
+          </div>
+          <div class="icon-image">
+            <div class="google-icon">
+              <img src="../login-page/IMAGE/flat-color-icons_google.png" alt="google" width="15px" >
+            </div>
+            <div class="fb-icon">
+              <a href="google.com"></a>
+              <img src="../login-page/IMAGE/logos_facebook.png" alt="facebook" width="15px">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app2.js"></script>
+</body>
+</html>
