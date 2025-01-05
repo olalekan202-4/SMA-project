@@ -1,0 +1,181 @@
+#search {
+  margin-top: 2px !important;
+}
+
+.my-subcriptions-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 20px 50px;
+}
+
+.my-subscriptions {
+  font-weight: 600;
+  font-size: 24px;
+}
+
+.subscription-list {
+  color: rgba(0, 0, 0, 0.637);
+  font-size: 14px;
+  font-weight: 200;
+}
+
+.add-new-subscription {
+  background-color: #3851ddda;
+  font-weight: 500;
+  font-size: 20px;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 15px;
+}
+
+hr {
+  margin: -15px 50px !important;
+  border: 1px solid black !important;
+}
+
+.subcription-option {
+  display: flex;
+  margin: 20px 10px;
+  gap: 20px;
+}
+
+.detail-sub {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  justify-content:space-around;
+  margin: 30px 40px;
+  padding: 10px;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.detail-sub1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  justify-content:space-around;
+  column-gap: 25px;
+  margin: 30px 40px;
+  padding: 10px;
+  font-weight: 500;
+  font-size: 18px;
+  border: 1px solid rgb(121, 121, 218);
+  border-radius: 15px;
+  background-color: #3851dd44;
+}
+
+.sub-name {
+  font-weight: 500;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.sub-plan {
+  margin-left: 44px;
+  padding: 2px;
+  font-size: 12px;
+}
+
+.expired {
+  color: red;
+  font-weight: 500;
+}
+
+.active {
+  color: green;
+  font-weight: 500;
+}
+
+.inactive {
+  color: grey;
+  font-weight: 500;
+}
+
+.active-plan {
+  width: 300px;
+  height: 700px;
+  padding: 20px;
+  margin-top: 100px;
+  border: 1px solid rgba(0, 0, 255, 0.61);
+  border-radius: 15px;
+  position: relative;
+}
+
+.netflix-plan {
+  border: 0px solid rgba(0, 0, 255, 0.616);
+  border-radius: 15px;
+  background-color: #3851dd44;
+  padding: 5px 10px;
+  height: 70px;
+}
+
+.netflix-image {
+  width: 100px;
+  margin-left: -30px;
+  margin-top: -20px;
+
+}
+
+.sub-name-netflix {
+  font-size: 20px;
+  font-weight: 500;
+  position: absolute;
+  top: 35px;
+  left: 75px;
+
+}
+
+.sub-plan-premium {
+  font-size: 12px;
+  position: absolute;
+  top: 60px;
+  left: 75px;
+
+}
+
+.greater-than {
+  font-size: 30px;
+  font-weight: 500;
+  position: absolute;
+  right: -110px;
+  top: -25px;
+}      
+
+.plan-info {
+  text-decoration: underline;
+  font-weight: 500;
+  padding: 20px 0px;
+}
+
+.plan-sub-info {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  justify-content: space-evenly;
+  gap: 5px 25px;
+  border-radius: 15px;
+  background-color: #3851dd44;
+  font-size: 12px;
+  padding: 10px;
+}
+
+.renew {
+  margin-bottom: 20px;
+  background-color: rgba(0, 0, 255, 0.74);
+  color: white;
+  padding: 10px 50px;
+  margin: 20px 0px;
+  border: 1px solid;
+  border-radius: 12px;
+  
+}
+
+.cancel {
+  margin-bottom: 20px;
+  background-color: rgba(0, 0, 255, 0.74);
+  color: white;
+  padding: 10px 43px;
+  margin: 0;
+  border: 1px solid;
+  border-radius: 12px;
+  
+}

@@ -3,7 +3,7 @@
 const username = document.querySelector(".username");
 const username2 = document.querySelector(".username2");
 const email = document.querySelector("#email-2");
-const allPasswords = document.querySelector(".password")
+// const allPasswords = document.querySelector(".password")
 const password = document.getElementById("password");
 const confirmPassword = document.getElementById("confirm-password");
 const hiddenPassword = document.querySelector(".hidden-password");
@@ -26,10 +26,10 @@ hiddenPassword.addEventListener('click', function (e) {
     hiddenPassword.src = "../login-page/IMAGE/password-view-icon.png"; // Change back to first image
   }
 
-  if (allPasswords.type === "password") {
-    allPasswords.type = "text";
+  if (password.type === "password") {
+    password.type = "text";
   } else {
-    allPasswords.type = "password";
+    password.type = "password";
   }
   return hiddenPassword;
 
@@ -66,8 +66,8 @@ hiddenPassword2.addEventListener('click', function (e) {
     
 
     // password confirmation
-    allPasswords.addEventListener('input', function() {
-      if (allPasswords.value.length > 0) {
+    password.addEventListener('input', function() {
+      if (password.value.length > 0) {
         passwordImage.classList.add("hidden"); // Show the password icon if the field is not empty
       } else {
         passwordImage.classList.remove("hidden"); // Hide the password icon if the field is empty
@@ -82,14 +82,14 @@ hiddenPassword2.addEventListener('click', function (e) {
         password2Image.classList.remove("hidden"); // Hide the password icon if the field is empty
 
         if (confirmPassword.value === '') {
-          errorMsg.textContent = ''; // Clear message if confirm password is empty
-          message.className = 'error';
+          errorMsg.textContent = 'Confirm Password'; // Clear message if confirm password is empty
+          // message.classList.add('error');
         } else if (password.value === confirmPassword.value) {
           message.textContent = 'Passwords match!';
-          message.className = 'success';
+          message.classList.add('success');
         } else {
           message.textContent = 'Passwords do not match.';
-          message.className = 'error';
+          // errorMsg.classList.add('error');
         }
       }});
   
@@ -182,10 +182,22 @@ if(!emailRegex.test(email.value)) return handleDisplayError("Email", "email");
 
 if(password.value === "") return handleDisplayError("Password");
 if(confirmPassword.value === "") return handleDisplayError("Password");
- // if(!passwordRegex.test(password.value)) return handleDisplayError("Password", "password");
+ if(!passwordRegex.test(password.value)) return handleDisplayError("Password", "password");
 
 
 if(gender.value === "") return handleDisplayError("Gender");
+
+if (password.value !== confirmPassword.value) {
+  e.preventDefault(); // Prevent form submission
+  errorMsg.textContent = 'Passwords do not match!';
+}
+
+else {
+  // Clear error message and redirect to login page
+  errorMsg.textContent = '';
+  window.location.href = '../login-page/index.html'; // Redirect to login page
+}
+
 
 
 
@@ -200,12 +212,12 @@ if(gender.value === "") return handleDisplayError("Gender");
 
 
  handleSaveToStorage(formObj);
- // handleClearError();
+ handleClearError();
 })
 
 
 
-/////////////////////////////////////////saving to storage ////////////////////////////////
+// /////////////////////////////////////////saving to storage ////////////////////////////////
 const handleSaveToStorage = (formObject) => {
   const userStorage = localStorage.getItem("user_storage");
   if(!userStorage) {
@@ -221,6 +233,24 @@ const handleSaveToStorage = (formObject) => {
   handleResetFields();
 }
 
+// document.getElementById('submit').addEventListener('click', () => {
+//    // Get input values
+//   const email = document.getElementById('email-2').value.trim();
+//   const password = document.getElementById('password').value.trim();
+//   const confirmPassword = document.getElementById('confirm-password').value.trim();
+//   const errorMessage = document.getElementById('error');
+
+//   // Validate inputs
+//   if (!email || !password || !confirmPassword) {
+//     errorMessage.textContent = 'All fields are required.';
+//   } else if (password !== confirmPassword) {
+//     errorMessage.textContent = 'Passwords do not match.';
+//   } else {
+//     // Clear error message and redirect to login page
+//     errorMessage.textContent = '';
+//     window.location.href = '../login-page/index.html'; // Redirect to login page
+//   }
+// });
 
 
 
@@ -228,7 +258,7 @@ const handleSaveToStorage = (formObject) => {
 
 
 
-// // Array of Nigeria states
+// Array of Nigeria states
 // const nigeriaStates = [
 //   "Abia", "Adamawa", "Akwa Ibom", "Anambra", "Bauchi", "Bayelsa", "Benue", 
 //   "Borno", "Cross River", "Delta", "Ebonyi", "Edo", "Ekiti", "Enugu", 

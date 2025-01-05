@@ -18,8 +18,8 @@ body {
 .signup-img {
   width: 500px;
   border: 0;
-  /* mix-blend-mode:multiply;
-  opacity: 1; */
+  mix-blend-mode:multiply;
+  opacity: 1;
   
 }
 
