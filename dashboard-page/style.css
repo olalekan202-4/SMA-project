@@ -5,8 +5,11 @@ body {
 
 .navbar{
   background-color: #6074E4;
-  /* color: white !important; */
-  /* position: fixed !important; */
+  margin-top: -250px !important;
+}
+
+a {
+  color: white !important;
 }
 
 .tsma {
@@ -19,16 +22,24 @@ body {
   padding: 10px;
 }
 
+.dash-board {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  margin-top: 10px;
+}
+
 .main-section {
-  justify-content: space-around;
+  justify-content: space-between !important;
   margin-top: 10px!important;
+  margin-left: -210px !important;
   padding: 5px;
 }
 
 .main-section-sub {
   justify-content: start;
   margin-top: 10px!important;
-  margin-left: 10px!important;
+  margin-left: -210px !important;
   padding: 5px;
   gap: 5px;
 }
@@ -131,7 +142,8 @@ input::placeholder {
   justify-content: start;
   padding: 10px 6px;
   margin-top: 20px !important;
-  gap: 45px;
+  margin-left: -260px !important;
+  gap: 10px;
 }
 
 .usage-analytics {
@@ -317,7 +329,8 @@ li {
 .my-sub-container {
   display: flex;
   justify-content: space-between;
-  padding: 20px 70px;
+  padding: 10px 20px;
+  margin-left: -230px;
 }
 
 .my-sub {

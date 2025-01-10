@@ -1,5 +1,3 @@
-// const firstName = document.getElementById("first-name");
-// const LastName = document.getElementById("last-name");
 const username = document.querySelector(".username");
 const username2 = document.querySelector(".username2");
 const email = document.querySelector("#email-2");
