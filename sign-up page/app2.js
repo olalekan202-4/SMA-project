@@ -1,7 +1,6 @@
 const username = document.querySelector(".username");
 const username2 = document.querySelector(".username2");
 const email = document.querySelector("#email-2");
-// const allPasswords = document.querySelector(".password")
 const password = document.getElementById("password");
 const confirmPassword = document.getElementById("confirm-password");
 const hiddenPassword = document.querySelector(".hidden-password");
@@ -51,70 +50,70 @@ hiddenPassword2.addEventListener('click', function (e) {
 
 })
 
-    // Add an event listener to detect input
-    email.addEventListener("input", function () {
-      // Remove the icon when the user starts typing
-      if (email.value.length > 0) {
-        emailIcon.classList.add("hidden"); // Add 'hidden' class to hide the icon
-      } else {
-        emailIcon.classList.remove("hidden"); // Show the icon again if the field is empty
-      }
-    });
+  // Add an event listener to detect input
+  email.addEventListener("input", function () {
+    // Remove the icon when the user starts typing
+    if (email.value.length > 0) {
+      emailIcon.classList.add("hidden"); // Add 'hidden' class to hide the icon
+    } else {
+      emailIcon.classList.remove("hidden"); // Show the icon again if the field is empty
+    }
+  });
 
     
 
-    // password confirmation
-    password.addEventListener('input', function() {
-      if (password.value.length > 0) {
-        passwordImage.classList.add("hidden"); // Show the password icon if the field is not empty
+  // password confirmation
+  password.addEventListener('input', function() {
+    if (password.value.length > 0) {
+      passwordImage.classList.add("hidden"); // Show the password icon if the field is not empty
+    } else {
+      passwordImage.classList.remove("hidden"); // Hide the password icon if the field is empty
+
+  }})
+    
+  // confirm the password
+  confirmPassword.addEventListener('input', function() {
+    if (confirmPassword.value.length > 0) {
+      password2Image.classList.add("hidden"); // Show the password icon if the field is not empty
+    } else {
+      password2Image.classList.remove("hidden"); // Hide the password icon if the field is empty
+
+      if (confirmPassword.value === '') {
+        errorMsg.textContent = 'Confirm Password'; // Clear message if confirm password is empty
+        // message.classList.add('error');
+      } else if (password.value === confirmPassword.value) {
+        message.textContent = 'Passwords match!';
+        message.classList.add('success');
       } else {
-        passwordImage.classList.remove("hidden"); // Hide the password icon if the field is empty
+        message.textContent = 'Passwords do not match.';
+        // errorMsg.classList.add('error');
+      }
+    }});
+
+
+  // username
+  username.addEventListener('input', function() {
+    if (username.value.length > 0) {
+      userIcon[0].classList.add("hidden"); // Show the username icon if the field is not empty
+    } else {
+      userIcon[0].classList.remove("hidden"); // Hide the username icon if the field is empty
+    }
+  });
+
+  // username2
+  username2.addEventListener('input', function() {
+    if (username2.value.length > 0) {
+      userIcon[1].classList.add("hidden"); // Show the username icon if the field is not empty
+    } else {
+      userIcon[1].classList.remove("hidden"); // Hide the username icon if the field is empty
+    }
+  });
+
+
   
-    }})
-    
-    // confirm the password
-    confirmPassword.addEventListener('input', function() {
-      if (confirmPassword.value.length > 0) {
-        password2Image.classList.add("hidden"); // Show the password icon if the field is not empty
-      } else {
-        password2Image.classList.remove("hidden"); // Hide the password icon if the field is empty
-
-        if (confirmPassword.value === '') {
-          errorMsg.textContent = 'Confirm Password'; // Clear message if confirm password is empty
-          // message.classList.add('error');
-        } else if (password.value === confirmPassword.value) {
-          message.textContent = 'Passwords match!';
-          message.classList.add('success');
-        } else {
-          message.textContent = 'Passwords do not match.';
-          // errorMsg.classList.add('error');
-        }
-      }});
-  
-
-    // username
-    username.addEventListener('input', function() {
-      if (username.value.length > 0) {
-        userIcon[0].classList.add("hidden"); // Show the username icon if the field is not empty
-      } else {
-        userIcon[0].classList.remove("hidden"); // Hide the username icon if the field is empty
-      }
-    });
-
-    // username2
-    username2.addEventListener('input', function() {
-      if (username2.value.length > 0) {
-        userIcon[1].classList.add("hidden"); // Show the username icon if the field is not empty
-      } else {
-        userIcon[1].classList.remove("hidden"); // Hide the username icon if the field is empty
-      }
-    });
-
-
-    
 
 const handleClearError = () => {
-  errorMsg.innerHTML = "";
+errorMsg.innerHTML = "";
 }
 
 
@@ -127,32 +126,32 @@ const handleResetFields = () => {
   errorMsg.innerHTML = ""
 }
 
-const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
-const upperCase = /[A-Z]/;
-const lowercase = /[a-z]/;
-const digit = /\d/;
-const special = /[@$!%*?&]/;
+  const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+  const passwordRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
+  const upperCase = /[A-Z]/;
+  const lowercase = /[a-z]/;
+  const digit = /\d/;
+  const special = /[@$!%*?&]/;
 
 //////////////////////////////////field validations //////////////////////////////////////////
 const handleDisplayError = (inputName, validationType="default") =>{
-if(validationType === "default") return errorMsg.innerHTML = `${inputName} is missing, kindly input and continue`;
-if(validationType === "email") return errorMsg.innerHTML = `${inputName} type is invalid, kindly input a valid ${inputName}!`;
-if(validationType === "password") return errorMsg.innerHTML = `${inputName} must have a minimum of 8 characters, including at least one uppercase letter, one lowercase letter, one digit, and one special character.`;
+  if(validationType === "default") return errorMsg.innerHTML = `${inputName} is missing, kindly input and continue`;
+  if(validationType === "email") return errorMsg.innerHTML = `${inputName} type is invalid, kindly input a valid ${inputName}!`;
+  if(validationType === "password") return errorMsg.innerHTML = `${inputName} must have a minimum of 8 characters, including at least one uppercase letter, one lowercase letter, one digit, and one special character.`;
 }
 
 
 const handleValidatePassword = (password) => {
 let msg = "password must contain";
-if(!upperCase.test(password)) msg += " at least one uppercase,"
-if(!lowercase.test(password)) msg += " at least one lowercase,"
-if(!digit.test(password)) msg += " a digit,"
-if(!special.test(password)) msg += " a special character,"
-if(password.length < 8) msg += " password must be more than 8 letters"
+  if(!upperCase.test(password)) msg += " at least one uppercase,"
+  if(!lowercase.test(password)) msg += " at least one lowercase,"
+  if(!digit.test(password)) msg += " a digit,"
+  if(!special.test(password)) msg += " a special character,"
+  if(password.length < 8) msg += " password must be more than 8 letters"
 
 
-if(msg === "password must contain") return handleClearError();
-return errorMsg.innerHTML = msg;
+  if(msg === "password must contain") return handleClearError();
+  return errorMsg.innerHTML = msg;
 }
 
 
@@ -160,101 +159,68 @@ return errorMsg.innerHTML = msg;
 
 //////////////////////////////////////event listeners //////////////////////////////////////////
 password.addEventListener("input", function(e) {
-const pass = e.target.value;
-handleValidatePassword(pass);
+  const pass = e.target.value;
+  handleValidatePassword(pass);
 })
 
 
 
 
-submit.addEventListener("click", function (e) {
-e.preventDefault();
-console.log("i am clicking");
-if(username.value === "") return handleDisplayError("First Name");
-if(username2.value === "") return handleDisplayError("Last Name");
+submit.addEventListener("click", async function (e) {
+  e.preventDefault();
+  if (!username.value) return handleDisplayError("First Name");
+  if (!username2.value) return handleDisplayError("Last Name");
+  if (!email.value || !emailRegex.test(email.value)) return handleDisplayError("Email", "email");
+  if (!password.value || !passwordRegex.test(password.value)) return handleDisplayError("Password", "password");
+  if (!confirmPassword.value || password.value !== confirmPassword.value) {
+    errorMsg.style.color = "red";
+    return (errorMsg.textContent = "Passwords do not match!");
+  }
+  if (!gender.value) return handleDisplayError("Gender");
 
+  const formObj = {
+    firstName: username.value,
+    lastName: username2.value,
+    email: email.value,
+    password: password.value,
+    confirmPassword: confirmPassword.value,
+  };
 
-if(email.value === "") return handleDisplayError("Email");
-if(!emailRegex.test(email.value)) return handleDisplayError("Email", "email");
+  try {
+    const response = await fetch("https://techcrush-subscription-management-app-api.onrender.com/api/v1/auth/signup", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formObj),
+    });
+    const data = await response.json();
+    console.log(data);
+    if (!response.ok) throw new Error(data.message || "Signup failed");
 
+    errorMsg.style.color = "green";
+    errorMsg.textContent = "Signup successful! Redirecting...";
+    handleSaveToStorage(formObj);
+    setTimeout(() => (window.location.href = "../login-page/index.html"), 2000);
+  } catch (error) {
+    errorMsg.style.color = "red";
+    errorMsg.textContent = error.message || "Something went wrong.";
+  }
+});
 
-if(password.value === "") return handleDisplayError("Password");
-if(confirmPassword.value === "") return handleDisplayError("Password");
- if(!passwordRegex.test(password.value)) return handleDisplayError("Password", "password");
-
-
-if(gender.value === "") return handleDisplayError("Gender");
-
-if (password.value !== confirmPassword.value) {
-  e.preventDefault(); // Prevent form submission
-  errorMsg.textContent = 'Passwords do not match!';
-}
-
-else {
-  // Clear error message and redirect to login page
-  errorMsg.textContent = '';
-  window.location.href = '../login-page/index.html'; // Redirect to login page
-}
-
-
-
-
- const formObj = {
-     lastName: username.value,
-     firstName: username2.value,
-     email: email.value,
-     gender: gender.value,
-     password: password.value,
-     confirmPassword: confirmPassword.value,
- }
-
-
- handleSaveToStorage(formObj);
- handleClearError();
-})
-
-
-
-// /////////////////////////////////////////saving to storage ////////////////////////////////
-const handleSaveToStorage = (formObject) => {
+// /////////// // setTimeout(() => (window.location.href = "../login-page/index.html"));//////////////////////////////saving to storage ////////////////////////////////
+const handleSaveToStorage = (formObj) => {
   const userStorage = localStorage.getItem("user_storage");
   if(!userStorage) {
-      const formString = JSON.stringify([formObject]);
+      const formString = JSON.stringify([formObj]);
       localStorage.setItem("user_storage", formString);
   }
 
   if(Storage) {
       const savedObj = JSON.parse(userStorage);
-      const newSavedObj = [formObject, ...savedObj]//spread operator
+      const newSavedObj = [formObj, ...savedObj]//spread operator
       localStorage.setItem("user_storage", JSON.stringify(newSavedObj));
   }
   handleResetFields();
 }
-
-// document.getElementById('submit').addEventListener('click', () => {
-//    // Get input values
-//   const email = document.getElementById('email-2').value.trim();
-//   const password = document.getElementById('password').value.trim();
-//   const confirmPassword = document.getElementById('confirm-password').value.trim();
-//   const errorMessage = document.getElementById('error');
-
-//   // Validate inputs
-//   if (!email || !password || !confirmPassword) {
-//     errorMessage.textContent = 'All fields are required.';
-//   } else if (password !== confirmPassword) {
-//     errorMessage.textContent = 'Passwords do not match.';
-//   } else {
-//     // Clear error message and redirect to login page
-//     errorMessage.textContent = '';
-//     window.location.href = '../login-page/index.html'; // Redirect to login page
-//   }
-// });
-
-
-
-
-
-
 
 // Array of Nigeria states
 // const nigeriaStates = [

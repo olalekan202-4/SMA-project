@@ -24,7 +24,7 @@
     <div class="sub-container">
       <h1 class="login">Welcome back</h1>
       <div class="enter-details">Please enter your details below</div>
-      <form id="loginForm">
+      <form id="loginForm" action="/submit" method="POST">
         <div class="email-container">
           <div class="email-icon">
             <img id="email-image" src="IMAGE\email-icon.png" alt="user-icon" width="10px">
@@ -46,7 +46,7 @@
         <div class="error" id="error"></div>
         <div class="checkbox-container">
           <input type="checkbox" id="checkbox" name="checkbox" class="checkbox">
-          <label class="remember-me" for="checkbox">Remember Password <a class="forget-password" href="#">Forget password?</a></label>
+          <label class="remember-me" id="forget-password" for="checkbox">Remember Password <a class="forget-password" href="#">Forget password?</a></label>
         </div>
       </form>
       <div>

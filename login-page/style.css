@@ -153,9 +153,3 @@ input::placeholder {
   margin: 0px 10px;
   font-size: 12px;
 }
-
-@media screen and (max-width 500px) {
-  body {
-    overflow-x: hidden;
-  }
-}
