@@ -7,361 +7,118 @@
   <link rel="stylesheet" href="styleS.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../dashboard-page/style.css">
+  <link rel="stylesheet" href="../nav-bar/nav-bar.css">
 </head>
-<body>
-  <!-- side nav-bar -->
-  <!-- <nav class="navbar navbar-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand tsma" href="#">TSMA</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar" id="toggleButton">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="../dashboard-page/index.html">Dashboard</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../subscription-page/indexS.html">Subscription</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Usage Analytics</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Payment</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Settings</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Help & Support</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../login-page/index.html">Login/SignUp </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav> -->
-  <div class="row">
-    <div class="col-sm-4">
-      <nav class="navbar h-100 w-50 position-sticky">
-        <div class="container-fluid">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="navbar-brand tsma" href="#">TSMA</a>
-            </li>
-              <li class="nav-item">
-                <div class="dash-board">
-                  <div>
-                    <img src="../login-page/IMAGE/dash-board.png" alt="dash-board" width="30px" height="30px">
-                  </div>
-                  <div>
-                    <a class="nav-link" href="../dashboard-page/index.html">Dashboard</a>
-                  </div>
-                </div>
-              </li>
-
-            </li>
-            <li class="nav-item">
-              <div class="dash-board">
-                <div>
-                  <img src="../login-page/IMAGE/sub-icon.png" alt="subcription" width="30px" height="30px">
-                </div>
-                <div>
-                  <a class="nav-link" href="../subscription-page/indexS.html">Subscription</a>
-                </div>
-              </div>
-            </li>
-
-            <li class="nav-item">
-              <div class="dash-board">
-                <div>
-                  <img src="../login-page/IMAGE/usage-icon.png" alt="usage" width="30px" height="30px">
-                </div>
-                <div>
-                  <a class="nav-link" href="#">Usage Analytics</a>
-                </div>
-              </div>
-            </li>
-
-            <li class="nav-item">
-              <div class="dash-board">
-                <div>
-                  <img src="../login-page/IMAGE/payment-icon.png" alt="payment" width="30px" height="30px">
-                </div>
-                <div>
-                  <a class="nav-link" href="#">Payment</a>
-                </div>
-              </div>
-            </li>
-
-            <li class="nav-item">
-              <div class="dash-board">
-                <div>
-                  <img src="../login-page/IMAGE/settings-icon.png" alt="settings" width="30px" height="30px">
-                </div>
-                <div>
-                  <a class="nav-link" href="#">Settings</a>
-                </div>
-              </div>
-            </li>
-
-            <li class="nav-item">
-              <div class="dash-board">
-                <div>
-                  <img src="../login-page/IMAGE/help-icon.png" alt="help" width="30px" height="30px">
-                </div>
-                <div>
-                  <a class="nav-link" href="#">Help & Support</a>
-                </div>
-              </div>
-            </li>
-            
-            <li class="nav-item">
-              <div class="dash-board">
-                <div>
-                  <img src="../login-page/IMAGE/help-icon.png" alt="logout" width="30px" height="30px">
-                </div>
-                <div>
-                  <a class="nav-link" href="../login-page/index.html">Log-out </a>
-                </div>
-              </div>
-            </li>
-          </ul>
-        </div>
-      </nav>   
+  <body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h1>TSMA</h1>
+     <ul>
+       <li>
+            <img src="../login-page/IMAGE/clarity_dashboard-line.png" alt="Dashboard" class="icon">
+          <a href="../dashboard-page/index.html">Dashboard</a>
+        </li>
+       <li>
+          <img src="../login-page/IMAGE/ic_round-wifi-protected-setup.png" alt="Subscription" class="icon">
+          <a href="../subscription-page/indexS.html">Subscription</a>
+        </li>
+        <li>
+          <img src="../login-page/IMAGE/ix_start-data-analysis.png" alt="Usage Analysis" class="icon">
+          <a href="#">Usage Analysis</a>
+        </li>
+        <li>
+          <img src="../login-page/IMAGE/fi_credit-card.png" alt="Payment" class="icon">
+          <a href="#">Payment</a>
+        </li>
+        <li>
+          <img src="../login-page/IMAGE/fi_settings.png" alt="Settings" class="icon">
+          <a href="#">Settings</a>
+        </li>
+        <li>
+          <img src="../login-page/IMAGE/fi_help-circle.png" alt="Help and Support" class="icon">
+          <a href="#">Help & Support</a>
+        </li>
+        <li>
+          <img src="../login-page/IMAGE/material-symbols_logout.png" alt="Log out" class="icon">
+          <a href="../login-page/index.html">Log Out</a>
+        </li>
+      </ul>
     </div>
 
-    <div class="col-8">
+
+    <!-- Main Content -->
+    <div class="main-container">
+      <!-- Top Navbar -->
+      <div class="top-navbar">
         <div class="row main-section">
+          <!-- Left Section -->
           <div class="col-2">
-            <div class="sub-img">
-              <div>
-                <img src="../login-page/IMAGE/profile-picture.png" alt="image" width="30px">
-              </div>
-              <div class="dashboard-discription"><div class="user-name" id="username"></div> Here's your Dashboard</div>
+          <div class="sub-img">
+            <img src="../login-page/IMAGE/profile-picture.png" alt="Profile" width="30px">
+            <div class="dashboard-description">
+              <div class="user-name" id="username"></div>
+              Here's your Dashboard
+            </div>
             </div>
           </div>
+
+          <!-- Center Section (Search) -->
           <div class="col-2 img-container">
             <div class="img">
-              <img src="../login-page/IMAGE/search.svg" alt="search">
-            </div>
-            <input type="search" placeholder="search" class="search" id="search">
+            <img src="../login-page/IMAGE/search.svg" alt="Search Icon">
           </div>
+          <input type="search" placeholder="Search" class="search" id="search">
+          </div>
+
+        <!-- Right Section -->
           <div class="col-2">
             <div class="sub-img">
               <div class="image2">
-                <div class="alert-div" id="alarm"></div>
-                <img src="../login-page/IMAGE/icons8-notification.svg" alt="notification" width="15px">
+              <div class="alert-div" id="alarm"></div>
+                <img src="../login-page/IMAGE/icons8-notification.svg" alt="Notification" width="15px">
               </div>
               <div class="image2">
-                <div class="alert-div"></div>
-              <img src="../login-page/IMAGE/icons8-email-50.png" alt="msg" width="15px">
+              <div class="alert-div"></div>
+                <img src="../login-page/IMAGE/icons8-email-50.png" alt="Message" width="15px">
               </div>
-              <div>
-                <img src="../login-page/IMAGE/profile-picture.png" alt="image" width="30px">  
-              </div>
-              <div class="dashboard-discription"><div class="user-name" id="username2"></div> Manage</div>
+              <img src="../login-page/IMAGE/profile-picture.png" alt="Profile" width="30px">
+                <div class="dashboard-description">
+                  <div class="user-name" id="username2"></div>
+                  Manage
+                </div>
             </div>
-          </div>
         </div>
-         <!-- user grid -->
-        <main>
-          <div class="my-subcriptions-container">
-            <div class="my-subscriptions">My subscriptions
-              <div class="subscription-list">
-                List of all your subscriptions in one list
-              </div>
-            </div>
-    
-            <div class="add-new-subscription">
-              + Add New Subscription
-            </div>
-          </div>
-          <hr>
-          <div class="subcription-option">
-            <div>
-              <div class="detail-sub">
-                <div class="platform">Platform</div>
-                <div>Amount</div>
-                <div>Purchase Date</div>
-                <div>Expire Date</div>
-                <div>Status</div>
-              </div>
-              <div class="my-subcriptions-container-list">
-                <div class="detail-sub1">
-                  <div>
-                    <div>
-                      <img src="../login-page/IMAGE/chatgpt logo.png" alt="chat-gpt" width="30px" height="30px">
-                      <span class="sub-name">Chatgpt</span>
-                    </div >
-                    <div class="sub-plan">Premium Plan</div>
-                  </div>
-                  <div>₦32,750/Monthly</div>
-                  <div>5-11-2024</div>
-                  <div>4-12-2024</div>
-                  <div class="expired">Expired</div>
-                </div>
-        
-                <div class="detail-sub1">
-                  <div>
-                    <div>
-                      <img src="../login-page/IMAGE/youtube-logo.png" alt="youtube" width="30px" height="30px">
-                      <span class="sub-name">Youtube</span>
-                    </div>
-                    <div class="sub-plan">Family Plan</div>
-                  </div>
-                <div>₦35,585/Monthly</div>
-                <div>12-11-2024</div>
-                <div>11-11-2024</div>
-                <div class="expired">Expired</div>
-              </div>
-                <div class="detail-sub1">
-                  <div>
-                    <div>
-                      <img src="../login-page/IMAGE/figma-logo.png" alt="figma" width="30px" height="30px">
-                     <span class="sub-name">Figma</span>
-                    </div>
-                    <div class="sub-plan">Professional Team</div>
-                  </div>
-                  <div>₦23,350/Monthly</div>
-                  <div>29-12-2024</div>
-                  <div>28-01-2025</div>
-                  <div class="active">Active</div>
-                </div>
-                <div class="detail-sub1">
-                  <div>
-                    <div>
-                      <img src="../login-page/IMAGE/linkedin-logo.png" alt="linkedin-logo" width="30px" height="30px">
-                      <span class="sub-name">LinkedIn</span>
-                    </div>
-                    <div class="sub-plan">Premium Business</div>
-                  </div>
-                  <div>₦92,500/Monthly</div>
-                  <div>26-12-2024</div>
-                  <div>25-01-2025</div>
-                  <div class="active">Active</div>
-                </div>
-                <div class="detail-sub1">
-                  <div>
-                    <div>
-                      <img src="../login-page/IMAGE/mobbin-logo.png" alt="mobbin" width="30px" height="30px">
-                      <span class="sub-name">Mobbin</span>
-                    </div>
-                    <div class="sub-plan">Individual Plan</div>
-                  </div>
-                  <div>₦15,500/Monthly</div>
-                  <div>26-12-2024</div>
-                  <div>25-01-2025</div>
-                  <div class="active">Active</div>
-                </div>
-                <div class="detail-sub1">
-                  <div>
-                    <div>
-                      <img src="../login-page/IMAGE/Spotify logo.png" alt="spotify" width="30px" height="30px">
-                      <span class="sub-name">Spotify</span>
-                    </div>
-                    <div class="sub-plan">Premium Family</div>
-                  </div>
-                  <div>₦2,000/Monthly</div>
-                  <div>26-11-2024</div>
-                  <div>25-12-2024</div>
-                  <div class="expired">Expired</div>
-                </div>
-                <div class="detail-sub1">
-                  <div>
-                    <div>
-                      <img src="../login-page/IMAGE/amazon-prime-video- logo.png" alt="amazon" width="30px" height="30px">
-                      <span class="sub-name">Amazon</span>
-                    </div>
-                    <div class="sub-plan">Premium Plan</div>
-                  </div>
-                  <div>₦2,300/Monthly</div>
-                  <div>26-05-2024</div>
-                  <div>25-06-2024</div>
-                  <div class="inactive">Inactive</div>
-                </div>
-                <div class="detail-sub1">
-                  <div>
-                    <div>
-                      <img src="../login-page/IMAGE/Netflix logo.png" alt="netflix" width="30px" height="30px">
-                      <span class="sub-name">Netflix</span>
-                    </div>
-                    <div class="sub-plan">Premium Plan</div>
-                  </div>
-                  <div>₦5,600/Monthly</div>
-                  <div>15-11-2024</div>
-                  <div>14-12-2024</div>
-                  <div class="expired">Expired</div>
-                </div>
-              </div>
-    
-            </div>
-            <div class="active-plan">
-              <div class="netflix-plan">
-                <div>
-                  <img src="../login-page/IMAGE/Netflix logo.png" alt="netflix" class="netflix-image">
-                  <span class="sub-name-netflix">Netflix</span>
-                </div>
-                <div class="sub-plan-premium">
-                  Premium Plan
-                  <span class="greater-than">></span>
-                </div>
-              </div>
-    
-              <div class="plan-info">Plan Information</div>
-    
-              <div class="plan-sub-info">
-                <div>Status</div>
-                <div>Expired</div>
-                <div>Subscription Date </div>
-                <div>15-11-2024</div>
-                <div>Expire Date</div>
-                <div>15-12-2024</div>
-              </div>
-    
-              <div class="plan-info">Plan History</div>
-              <div>
-                <div>
-                  <label for="">15-10-2024</label>
-                  <input type="radio">
-                </div>
-                <div>
-                  <label for="">15-11-2024</label>
-                  <input type="radio">
-                </div>
-                <div>
-                  <label for="">15-12-2024</label>
-                  <input type="radio">
-                </div>
-                <div>
-                  <label for="">15-01-2025</label>
-                  <input type="radio">
-                </div> 
-              </div>
-              <div>
-                <button class="renew">Renew for ₦2,000</button>
-              </div>
-    
-              <div>
-                <button class="cancel">Cancel Subcription</button>
-              </div>
-            </div>
-          </div>
-        </main>
+        </div>
 
-        <form id="form" action="">
-          <button type="submit">Click Me</button>
-        </form>
-    
+      <!-- Toggle Button -->
+      <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
     </div>
-  
-  
+    <!-- End of Top Navbar -->    
+          <!-- user grid -->
+          <div class="main-section">
+            <main>
+              <div class="my-subcriptions-container">
+                <div class="my-subscriptions">
+                  My subscriptions
+                  <div class="subscription-list">
+                    List of all your subscriptions in one list
+                  </div>
+                </div>
+                <div class="add-new-subscription">
+                  + Add New Subscription
+                </div>
+              </div>
+              <hr>
+              <div id="active-plan"></div>
+            </main>
+          </div>
+          
+      
+    
+    
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="appS.js"></script>
-  <script src="../dashboard-page/app.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="appS.js"></script>
+    <script src="../nav-bar/nav-bar.js"></script>
+  </body>
 </html>

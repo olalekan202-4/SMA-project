@@ -1,0 +1,244 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+  background-color: #6074E4;
+  color: white;
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow-y: auto;
+  transition: all 0.3s ease;
+}
+
+.sidebar h1 {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  text-align: center;
+  background-color: #6074E4;
+  padding: 20px;
+  margin: 0;
+  color: white;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar ul li {
+  padding: 15px 20px;
+  transition: background 0.3s;
+}
+
+.sidebar ul li:hover {
+  background: #34495e;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 1rem;
+  display: block;
+}
+
+/* Sidebar List with Icons */
+.sidebar ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 20px;
+  transition: background 0.3s;
+}
+
+.sidebar ul li:hover {
+  background: #34495e;
+}
+
+.sidebar ul li img.icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 18px;
+  flex-grow: 1;
+}
+
+
+/* Collapsible Sidebar */
+.sidebar.collapsed {
+  width: 0;
+  overflow: hidden;
+}
+
+/* Main Container */
+.main-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin-left: 250px; /* Reserve space for the sidebar */
+  width: calc(100% - 250px); /* Adjust width */
+  transition: margin-left 0.3s ease, width 0.3s ease;
+}
+
+.main-container.collapsed {
+  margin-left: 0;
+  width: 100%; /* Full width when sidebar is collapsed */
+}
+
+/* Top Navbar */
+.top-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 20px;
+  height: 70px;
+  flex-shrink: 0;
+  z-index: 1000;
+  position: fixed;
+  width: calc(100% - 250px); /* Full width minus sidebar */
+  left: 250px; /* Matches the sidebar width */
+  transition: left 0.3s ease, width 0.3s ease;
+}
+
+/* When Sidebar is Collapsed */
+.main-container.collapsed .top-navbar {
+  width: 100%; /* Full width when sidebar is hidden */
+  left: 0;
+}
+
+/* Navbar Content */
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.col-2 {
+  margin-right: 3%;
+  display: flex;
+  align-items: center;
+}
+
+.sub-img {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dashboard-description {
+  font-size: 0.9rem;
+  line-height: 1.2;
+}
+
+.user-name {
+  font-weight: bold;
+}
+
+.img-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search {
+  padding: 8px 50px;
+  border: 1px solid #6074E4;
+  background-color: #6074e42a;;
+  border-radius: 15px;
+  font-size: 0.9rem;
+}
+
+.search:focus {
+  outline: none;
+}
+
+.img {
+  position: absolute;
+  left: 30px;
+  
+
+}
+.image2 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px;
+  border: 1px solid #6074E4;
+  background-color: #6074e42a;;
+  border-radius: 15px;
+}
+
+.alert-div {
+  position: absolute;
+  top: -5px;
+  right: 0px;
+  background-color: red;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+/* Toggle Button */
+.toggle-btn {
+  background: none;
+  border: none;
+  color: #6074E4;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Main Content */
+.main-content {
+  flex-grow: 1;
+  padding: 20px;
+  margin-top: 9%;
+  overflow-y: auto;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .top-navbar {
+    width: 100%;
+    left: 0;
+    padding: 10px;
+  }
+
+  .col-2 {
+    flex: 1; /* Distribute space evenly */
+    justify-content: center;
+  }
+
+  .img-container {
+    display: none; /* Hide search on small screens */
+  }
+
+  .toggle-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+}

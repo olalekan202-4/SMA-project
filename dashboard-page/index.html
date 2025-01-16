@@ -26,218 +26,145 @@
       <img src="../login-page/IMAGE/ix_start-data-analysis.png" alt="Usage Analysis" class="icon">
       <a href="#">Usage Analysis</a>
     </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Payment</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Settings</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Help & Support</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="../login-page/index.html">Login/SignUp </a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav> -->
-  <!-- user grid -->
-  <div class="row">
-    <div class="col-sm-4">
-      <nav class="navbar h-100 w-50 position-sticky">
-        <div class="container-fluid">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="navbar-brand tsma" href="#">TSMA</a>
-            </li>
-              <li class="nav-item">
-                <div class="dash-board">
-                  <div>
-                    <img src="../login-page/IMAGE/dash-board.png" alt="dash-board" width="30px" height="30px">
-                  </div>
-                  <div>
-                    <a class="nav-link" href="../dashboard-page/index.html">Dashboard</a>
-                  </div>
-                </div>
-              </li>
+    <li>
+      <img src="../login-page/IMAGE/fi_credit-card.png" alt="Payment" class="icon">
+      <a href="#">Payment</a>
+    </li>
+    <li>
+      <img src="../login-page/IMAGE/fi_settings.png" alt="Settings" class="icon">
+      <a href="#">Settings</a>
+    </li>
+    <li>
+      <img src="../login-page/IMAGE/fi_help-circle.png" alt="Help and Support" class="icon">
+      <a href="#">Help & Support</a>
+    </li>
+    <li>
+      <img src="../login-page/IMAGE/material-symbols_logout.png" alt="Log out" class="icon">
+      <a href="../login-page/index.html">Log Out</a>
+    </li>
+  </ul>
+</div>
 
-            </li>
-            <li class="nav-item">
-              <div class="dash-board">
-                <div>
-                  <img src="../login-page/IMAGE/sub-icon.png" alt="subcription" width="30px" height="30px">
-                </div>
-                <div>
-                  <a class="nav-link" href="../subscription-page/indexS.html">Subscription</a>
-                </div>
-              </div>
-            </li>
 
-            <li class="nav-item">
-              <div class="dash-board">
-                <div>
-                  <img src="../login-page/IMAGE/usage-icon.png" alt="usage" width="30px" height="30px">
-                </div>
-                <div>
-                  <a class="nav-link" href="#">Usage Analytics</a>
-                </div>
-              </div>
-            </li>
-
-            <li class="nav-item">
-              <div class="dash-board">
-                <div>
-                  <img src="../login-page/IMAGE/payment-icon.png" alt="payment" width="30px" height="30px">
-                </div>
-                <div>
-                  <a class="nav-link" href="#">Payment</a>
-                </div>
-              </div>
-            </li>
-
-            <li class="nav-item">
-              <div class="dash-board">
-                <div>
-                  <img src="../login-page/IMAGE/settings-icon.png" alt="settings" width="30px" height="30px">
-                </div>
-                <div>
-                  <a class="nav-link" href="#">Settings</a>
-                </div>
-              </div>
-            </li>
-
-            <li class="nav-item">
-              <div class="dash-board">
-                <div>
-                  <img src="../login-page/IMAGE/help-icon.png" alt="help" width="30px" height="30px">
-                </div>
-                <div>
-                  <a class="nav-link" href="#">Help & Support</a>
-                </div>
-              </div>
-            </li>
-            
-            <li class="nav-item">
-              <div class="dash-board">
-                <div>
-                  <img src="../login-page/IMAGE/help-icon.png" alt="logout" width="30px" height="30px">
-                </div>
-                <div>
-                  <a class="nav-link" href="../login-page/index.html">Log-out </a>
-                </div>
-              </div>
-            </li>
-          </ul>
+  <!-- Main Content -->
+  <div class="main-container">
+    <!-- Top Navbar -->
+    <div class="top-navbar">
+      <div class="row main-section">
+        <!-- Left Section -->
+        <div class="col-2">
+         <div class="sub-img">
+          <img src="../login-page/IMAGE/profile-picture.png" alt="Profile" width="30px">
+          <div class="dashboard-description">
+            <div class="user-name" id="username"></div>
+            Here's your Dashboard
+          </div>
+          </div>
         </div>
-      </nav>
-      
-    </div>
-    <div class="col-sm-8">
-      <main>
-        <div class="row main-section">
-          <div class="col-2">
-            <div class="sub-img">
-              <div>
-                <img src="../login-page/IMAGE/profile-picture.png" alt="image" width="30px">
-              </div>
-              <div class="dashboard-discription"><div class="user-name" id="username"></div> Here's your Dashboard</div>
+
+        <!-- Center Section (Search) -->
+        <div class="col-2 img-container">
+          <div class="img">
+          <img src="../login-page/IMAGE/search.svg" alt="Search Icon">
+         </div>
+         <input type="search" placeholder="Search" class="search" id="search">
+        </div>
+
+       <!-- Right Section -->
+        <div class="col-2">
+          <div class="sub-img">
+            <div class="image2">
+             <div class="alert-div" id="alarm"></div>
+              <img src="../login-page/IMAGE/icons8-notification.svg" alt="Notification" width="15px">
+             </div>
+            <div class="image2">
+             <div class="alert-div"></div>
+              <img src="../login-page/IMAGE/icons8-email-50.png" alt="Message" width="15px">
             </div>
-          </div>
-          <div class="col-2 img-container">
-            <div class="img">
-              <img src="../login-page/IMAGE/search.svg" alt="search">
-            </div>
-            <input type="search" placeholder="search" class="search" id="search">
-          </div>
-          <div class="col-2">
-            <div class="sub-img">
-              <div class="image2">
-                <div class="alert-div" id="alarm"></div>
-                <img src="../login-page/IMAGE/icons8-notification.svg" alt="notification" width="15px">
-              </div>
-              <div class="image2">
-                <div class="alert-div"></div>
-              <img src="../login-page/IMAGE/icons8-email-50.png" alt="msg" width="15px">
-              </div>
              <img src="../login-page/IMAGE/profile-picture.png" alt="Profile" width="30px">
               <div class="dashboard-description">
                 <div class="user-name" id="username2"></div>
                 Manage
               </div>
-              <div class="dashboard-discription"><div class="user-name" id="username2"></div> Manage</div>
           </div>
        </div>
-        </div>
-        <!-- subcription grid -->
-        <div class="row main-section-sub">
-          <div class="col total-sub">
-            <div>Total Subscriptions</div>
-            <div class="sub-number">10</div>
+      </div>
+
+    <!-- Toggle Button -->
+    <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+  </div>
+
+      <!-- Dashboard Main Content -->
+      
+        <div class="main-content">
+          <div class="row main-section-sub">
+            <div class="col" id="total-sub">
+              <div>Total Subscriptions</div>
+              <div class="sub-number" style="color: white;">10</div>
+            </div>
+            <div class="col active-sub">
+              <div>Active Subscriptions</div>
+              <div class="sub-number">6</div>
+            </div>
+            <div class="col inactive-sub">
+              <div>Inactive Subscriptions</div>
+              <div class="sub-number">2</div>
+            </div>
+            <div class="col expired-sub">
+              <div>Expired Subscriptions</div>
+              <div class="sub-number">2</div>
+            </div>
           </div>
-          <div class="col active-sub">
-            <div>Active Subscriptions</div>
-            <div class="sub-number">6</div>
-          </div>
-          <div class="col inactive-sub">
-            <div>Inactive Subscriptions</div>
-            <div class="sub-number">2</div>
-          </div>
-          <div class="col expired-sub">
-            <div>Expired Subscriptions</div>
-            <div class="sub-number">2</div>
-          </div>
-        </div>
-        <!-- usage grid and chart -->
-        <div class="row sub-section">
-          <div class="col-sm-7 usage-analytics">
-            <div class="row">
-              <div class="col-sm-6 total">Total Amount Spent</div>
-              <div class="col-sm-6">
-                <div class="subcription-days">
-                  <div class="month">Month</div>
-                  <div class="days">6 Months</div>
-                  <div class="days">Year</div>
-                  <div class="days">Custom</div>
+      
+          <div class="row sub-section">
+            <div class="col-sm-7.5 usage-analytics">
+              <div class="row">
+                <div class="col-sm-6 total">Total Amount Spent</div>
+                <div class="col-sm-6">
+                  <div class="subcription-days">
+                    <div style="color: blue;">Month</div>
+                    <div class="days">6 Months</div>
+                    <div class="days">Year</div>
+                    <div class="days">Custom</div>
+                  </div>
+                </div>
+              </div>
+      
+              <div class="charts">
+                <div>
+                  <ul class="amount-list">
+                    <li>70$</li>
+                    <li>60$</li>
+                    <li>50$</li>
+                    <li>40$</li>
+                    <li>30$</li>
+                    <li>20$</li>
+                  </ul>
+                </div>
+      
+                <div class="bar" style="height: 40%;">
+                  <div class="label">Jun</div>
+                </div>
+                <div class="bar" style="height: 20%;">
+                  <div class="label">Jul</div>
+                </div>
+                <div class="bar" style="height: 50%;">
+                  <div class="label">Aug</div>
+                </div>
+                <div class="bar" style="height: 60%;">
+                  <div class="label">Sep</div>
+                </div>
+                <div class="bar" style="height: 75%; background-color: red;" id="oct">
+                  <div class="label">Oct</div>
+                </div>
+                <div class="bar" style="height: 35%;">
+                  <div class="label">Nov</div>
+                </div>
+                <div class="bar" style="height: 55%;">
+                  <div class="label">Dec</div>
                 </div>
               </div>
             </div>
-    
-            <div class="charts">
-              <div>
-                <ul class="amount-list">
-                  <li>70$</li>
-                  <li>60$</li>
-                  <li>50$</li>
-                  <li>40$</li>
-                  <li>30$</li>
-                  <li>20$</li>
-                </ul>
-              </div>
-    
-              <div class="bar" style="height: 40%;">
-                <div class="label">Jun</div>
-              </div>
-              <div class="bar" style="height: 20%;">
-                <div class="label">Jul</div>
-              </div>
-              <div class="bar" style="height: 50%;">
-                <div class="label">Aug</div>
-              </div>
-              <div class="bar" style="height: 60%;">
-                <div class="label">Sep</div>
-              </div>
-              <div class="bar" style="height: 75%;" id="oct">
-                <div class="label">Oct</div>
-              </div>
-              <div class="bar" style="height: 35%;">
-                <div class="label">Nov</div>
-              </div>
-              <div class="bar" style="height: 55%;">
-                <div class="label">Dec</div>
-              </div>
-            </div>
-          </div>
             <div class="col-sm-4 subscription-container">
               <div class="subcription">Subscription Category</div>
               <div class="circle"></div>
@@ -283,72 +210,67 @@
           <div class="all-subcription">
             <div class="sub-subcription">
               <img src="../login-page/IMAGE/Netflix logo.png" alt="netflix" class="my-imageN">
-            <div class="description-image-subN">
-             <span class="name-sub">Netflix</span> <br> <span >31st November 2024</span>
-            </div>
-            <div class="description-image-sub1">
-             <span> 15$/month</span><br><span>Expires on <span class="name2-sub">31st December</span></span>
-            </div>
-          </div>
-    
-          <div class="sub-subcription">
-            <img src="../login-page/IMAGE/Spotify logo.png" alt="spotify" width="100px" height="100px" class="my-image">
-            <div class="description-image-sub">
-             <span class="name-sub">Spotify</span> <br> <span>31st November 2024</span>
-            </div>
-            <div class="description-image-sub1">
-             <span> 15$/month</span><br><span>Expires on <span class="name2-sub">31st December</span></span>
-            </div>
-          </div>
-    
-          <div class="subscrption-status-container">
-            <div class="sub-status">Subscription status</div>
-            <div class="line-bar"></div>
-            <div class="status-sub">
-              <div>
-                <div class="status-circle"></div>
-                <div class="status-detail">6 Active Subscription</div>
+              <div id="description-image-subN">
+                <span class="name-sub">Netflix</span><br>
+                <span class="sub-date">31st November 2024</span>
               </div>
-              <div>
-                <div class="status2-circle"></div>
-                <div class="status-detail">4 InActive Subscription</div>
+              <div class="description-image-sub1">
+                <span>15$/month</span><br>
+                <span>Expires on <span class="name2-sub">31st December</span></span>
               </div>
             </div>
-          </div>
-    
-          <div class="sub-subcription">
-            <img src="../login-page/IMAGE/amazon-prime-video- logo.png" alt="amazon" width="100px" height="100px" class="my-image">
-            <div class="description-image-sub">
-             <span class="name-sub">Amazon Prime</span> <br> <span >31st November 2024</span>
+
+            <div class="sub-subcription">
+              <img src="../login-page/IMAGE/Spotify logo.png" alt="spotify" width="100px" height="100px" class="my-image">
+              <div class="description-image-sub">
+               <span class="name-sub">Spotify</span> <br> <span class="sub-date">31st November 2024</span>
+              </div>
+              <div class="description-image-sub1">
+               <span> 15$/month</span><br><span>Expires on <span class="name2-sub">31st December</span></span>
+              </div>
             </div>
-            <div class="description-image-sub1">
-             <span> 15$/month</span><br><span>Expires on <span class="name2-sub">31st December</span></span>
+
+            <div class="subscrption-status-container">
+              <div class="sub-status">Subscription status</div>
+              <div class="line-bar"></div>
+              <div class="status-sub">
+                <div>
+                  <div class="status-circle"></div>
+                  <div class="status-detail">6 Active Subscription</div>
+                </div>
+                <div class="inactive">
+                  <div class="status2-circle"></div>
+                  <div class="status-detail">4 InActive Subscription</div>
+                </div>
+              </div>
             </div>
-          </div>
-    
-          <div class="sub-subcription">
-            <img src="../login-page/IMAGE/chatgpt logo.png" alt="chat-gpt" width="100px" height="100px" class="my-image">
-            <div class="description-image-sub">
-             <span class="name-sub">Chat Gpt</span> <br> <span>31st November 2024</span>
+
+            <div class="sub-subcription">
+              <img src="../login-page/IMAGE/amazon-prime-video- logo.png" alt="amazon" width="100px" height="100px" class="my-image">
+              <div class="description-image-sub">
+               <span class="name-sub">Amazon Prime</span> <br> <span class="sub-date">31st November 2024</span>
+              </div>
+              <div class="description-image-sub1">
+               <span> 15$/month</span><br><span>Expires on <span class="name2-sub">31st December</span></span>
+              </div>
             </div>
-            <div class="description-image-sub1">
-             <span> 15$/month</span><span>Expires on <span class="name2-sub">31st December</span></span>
+
+            <div class="sub-subcription">
+              <img src="../login-page/IMAGE/chatgpt logo.png" alt="chat-gpt" width="100px" height="100px" class="my-image">
+              <div class="description-image-sub">
+               <span class="name-sub">Chat Gpt</span> <br> <span class="sub-date">31st November 2024</span>
+              </div>
+              <div class="description-image-sub1">
+               <span> 15$/month</span><br><span>Expires on <span class="name2-sub">31st December</span></span>
+              </div>
             </div>
           </div>
         </div>
-      </main>
-    </div>
   </div>
-
-  
-  
-  
-
-  
-
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <script src="app.js"></script>
+  <script src="../nav-bar/nav-bar.js"></script>
 </body>
 </html>

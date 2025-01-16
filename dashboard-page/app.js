@@ -1,49 +1,72 @@
-window.onload = () => {
-  // Retrieve all users from localStorage
-  const allUsersData = localStorage.getItem("user_storage");
-  console.log(allUsersData);
-
-  if (!allUsersData) {
-    alert("No users found in localStorage. Redirecting to login page...");
-    // window.location = "../login-page/index.html";
-    return;
-  }
-
-  let allUsers;
+window.onload = async () => {
   try {
-    allUsers = JSON.parse(allUsersData);
+    // Assume the user has entered login credentials (email and password).
+    const email = "user@example.com";  // Example email (replace with actual value).
+    const password = "userPassword";   // Example password (replace with actual value).
+
+    // Make a login request to the API to retrieve the token
+    const loginResponse = await fetch("https://techcrush-subscription-management-app-api.onrender.com/api/v1/auth/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email, password }),
+    });
+
+    if (!loginResponse.ok) {
+      throw new Error(`Login failed: ${loginResponse.statusText}`);
+    }
+
+    const loginData = await loginResponse.json();
+    const userToken = loginData.token;  // Assuming the token is in the 'token' field
+
+    // Store the token in localStorage (or another appropriate storage method)
+    localStorage.setItem("user_token", userToken);
+
+    // Fetch user data from the dashboard API using the retrieved token
+    const dashboardResponse = await fetch(
+      "https://techcrush-subscription-management-app-api.onrender.com/api/v1/user/dashboard",
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${userToken}`, // Use the retrieved token
+        },
+      }
+    );
+
+    if (!dashboardResponse.ok) {
+      throw new Error(`Error fetching user data: ${dashboardResponse.statusText}`);
+    }
+
+    const dashboardData = await dashboardResponse.json();
+    console.log("Dashboard Data:", dashboardData);
+
+    // Extract first and last name from the response data (adjust if needed)
+    const user = dashboardData.user;
+    if (!user || !user.firstName || !user.lastName) {
+      alert("User data is incomplete.");
+      return;
+    }
+
+    // Capitalize and display the first and last name
+    const capitalize = (name) => name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+    const firstName = capitalize(user.firstName);
+    const lastName = capitalize(user.lastName);
+
+    // Display the user name on the page
+    const usernameElement = document.getElementById("username");
+    const username2Element = document.getElementById("username2");
+
+    if (usernameElement && username2Element) {
+      usernameElement.textContent = `Hello, ${firstName} ${lastName}`;
+      username2Element.textContent = `${firstName} ${lastName},`;
+    } else {
+      console.error("Username elements not found in the DOM.");
+    }
+
   } catch (error) {
-    console.error("Error parsing user data from localStorage:", error);
-    alert("User data corrupted. Redirecting to login page...");
-    window.location = "../login-page/index.html";
-    return;
+    console.error("Error:", error);
+    alert("An error occurred. Please try again later.");
   }
-
-  // Retrieve the current user's email
-  const currentEmail = localStorage.getItem("current_user_email");
-
-  if (!currentEmail) {
-    alert("No logged-in user found. Redirecting to login page...");
-    // window.location = "../login-page/index.html";
-    return;
-  }
-
-  // Find the matching user
-  const matchingUser = allUsers.find(
-    (user) => user.email.toLowerCase() === currentEmail.toLowerCase()
-  );
-
-  if (!matchingUser) {
-    alert("User not found. Redirecting to login page...");
-    // window.location = "../login-page/index.html";
-    return;
-  }
-
-  // Capitalize names and display them
-  const capitalize = (name) => name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
-  const firstName = capitalize(matchingUser.firstName);
-  const lastName = capitalize(matchingUser.lastName);
-
-  document.getElementById("username").textContent = `Hello, ${firstName} ${lastName}`;
-  document.getElementById("username2").textContent = `${firstName} ${lastName},`;
 };
