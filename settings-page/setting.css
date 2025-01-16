@@ -1,0 +1,25 @@
+.setting-head {
+  display: flex;
+  gap: 50px;
+  padding: 20px;
+}
+
+#edit-profile {
+  font-weight: 600;
+  font-size: 1.2rem;
+
+}
+
+.settings-sub {
+  text-decoration: none;
+  color: black;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.settings-input {
+  display: flex;
+  gap: 10px;
+  padding: 20px;
+  margin-top: -50px;
+}
