@@ -1,3 +1,17 @@
+.main-content {
+  border: 1px solid #e0e0e0;
+  padding: 30px;
+}
+
+.sub-content{
+  border: 1px solid #e0e0e0;
+  padding: 30px;
+  border-radius: 15px;
+  margin-top: 10px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+
+}
+
 .setting-head {
   display: flex;
   gap: 50px;
@@ -19,8 +33,7 @@
 
 .settings-form {
   box-shadow: inset;
-  margin: 0 80px;
-  height: 800px;
+  margin: 0 50px;
 }
 
 .settings-input {
@@ -41,7 +54,7 @@
 }
 
 .settings-input button {
-  padding: 8px 50px;
+  padding: 10px 40px;
   border: 0 solid #e0e0e0;
   color: white;
   border-radius: 15px;
@@ -58,6 +71,7 @@
 }
 
 .button-save {
+  margin-bottom: 20px;
   font-weight: 600;
   font-size: 1.2rem;
   color: whitesmoke;

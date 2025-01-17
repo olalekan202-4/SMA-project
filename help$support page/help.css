@@ -1,0 +1,40 @@
+.help-content {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 15px;
+  gap: 20px;
+}
+
+.help-description {
+  background-color: #18225D;
+  color: white;
+  border: 1px solid #18225D;
+  width: fit-content;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+select {
+  border: 0px;
+  width: 100%;
+  padding: 5px 10px;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+select span {
+  font-weight: 500;
+}
+
+.help-img {
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+  width: fit-content;
+  height: fit-content;
+  padding: 8px 20px;
+  background-color: rgba(0, 0, 255, 0.877);
+  border-radius: 10px;
+}
