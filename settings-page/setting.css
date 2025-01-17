@@ -17,9 +17,52 @@
   font-size: 1.2rem;
 }
 
+.settings-form {
+  box-shadow: inset;
+  margin: 0 80px;
+  height: 800px;
+}
+
 .settings-input {
   display: flex;
   gap: 10px;
   padding: 20px;
-  margin-top: -50px;
+  margin-top: 10px;
+}
+
+.settings-input label {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.settings-input input {
+  padding: 8px 50px;
+  border: 1px solid #e0e0e0;
+  border-radius: 15px;
+}
+
+.settings-input button {
+  padding: 8px 50px;
+  border: 0 solid #e0e0e0;
+  color: white;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 255, 0.473);
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-top: 25px;
+}
+
+.save-changes {
+  text-align: center;
+  padding: 30px;
+  
+}
+
+.button-save {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: whitesmoke;
+  padding: 10px 80px;
+  border: 0 solid;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 255, 0.473);
 }
