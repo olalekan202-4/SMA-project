@@ -1,3 +1,4 @@
+
 body {
   font-family: 'Poppins', sans-serif;
   height: 100vh;
@@ -12,6 +13,8 @@ body {
   margin: 0;
   gap: 210px;
   padding: 20px;
+  position: relative;
+  flex-wrap: wrap; /* Adjust layout for smaller screens */
 }
 
 .image-container {
@@ -29,28 +32,30 @@ body {
   position: absolute;
   top: 40px;
   left: 20%;
-
 }
 
 .first-image {
   margin-top: 0px;
 }
+
 .second-image {
-  margin-top: 200px
+  margin-top: 200px;
 }
 
 .sub-container {
-  width: 350px;
-  background-color: #d5d9f5;
+  width: fit-content;
+  background-color: white;
   padding: 30px;
-  border: 0px;
+  border: 1px solid #3851ddda;
   border-radius: 15px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  margin-top: 100px;
+  max-width: 100%;
+  box-sizing: border-box; 
 }
 
 .login {
   font-size: 25px;
-  font-weight:bolder;
+  font-weight: bolder;
   margin-left: 10px;
   line-height: 30px;
 }
@@ -62,7 +67,8 @@ body {
   font-weight: 500;
 }
 
-.email-container, .password-container {
+.email-container,
+.password-container {
   position: relative;
   width: 270px;
 }
@@ -98,13 +104,12 @@ input::placeholder {
   right: -30px;
 }
 
-.login-btn{
+.login-btn {
   margin-top: 20px;
   width: 315px;
   padding: 10px;
   color: white;
   background-color: #3851ddda;
-
 }
 
 .checkbox {
@@ -152,4 +157,140 @@ input::placeholder {
   color: rgb(139, 10, 10);
   margin: 0px 10px;
   font-size: 12px;
+}
+
+/* Media Queries for Responsive Design */
+
+/* For devices with width 1024px or smaller */
+@media screen and (max-width: 1024px) {
+  .main-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .image-container {
+    padding: 20px;
+  }
+
+  .sub-container {
+    width: 90%;
+    padding: 20px;
+    margin-top: 50px;
+  }
+
+  .login-description {
+    font-size: 18px;
+    top: 20px;
+    left: 15%;
+  }
+
+  .sub-container {
+    margin-top: 50px;
+  }
+
+  input {
+    width: 250px;
+  }
+
+  .login-btn {
+    width: 270px;
+  }
+}
+
+/* For devices with width 768px or smaller */
+@media screen and (max-width: 768px) {
+  body {
+    background-color: white;
+  }
+
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    height: auto;
+    padding: 10px;
+    /* margin-top: -500px; */
+  }
+
+  .sub-container {
+    width: 85%; /* Adjust width further for mobile screens */
+    padding: 15px;
+    margin-top: 30px;
+  }
+
+  .password-icon-container {
+    top: 11px;
+    left: 20px;
+  }
+  
+  .password-hidden-container {
+    top: 11px;
+    right: 60px;
+  }
+
+  .login-description {
+    font-size: 16px;
+    top: 10px;
+    left: 10%;
+  }
+
+  .login-btn {
+    margin-top: 30px;
+
+    
+  }
+  
+
+  input {
+    width: 220px;
+  }
+
+  .login-btn {
+    width: 230px;
+  }
+
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .forget-password {
+    margin-left: 20px;
+  }
+}
+
+/* For devices with width 480px or smaller */
+@media screen and (max-width: 480px) {
+  .login-description {
+    font-size: 14px;
+    text-align: center;
+    top: 5px;
+    left: 5%;
+  }
+
+  .image-container {
+    display: none; /* Hide images for very small devices */
+  }
+
+  .sub-container {
+    padding: 20px;
+    margin-top: 20px;
+  }
+
+  input {
+    width: 200px;
+  }
+
+  .login-btn {
+    width: 210px;
+  }
+
+  .sub-container {
+    width: fit-content;
+    background-color: white;
+    padding: 30px;
+    border: 1px solid #3851ddda;
+    border-radius: 15px;
+    margin-top: 100px;
+  }
 }

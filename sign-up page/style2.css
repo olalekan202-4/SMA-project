@@ -1,5 +1,9 @@
+
+
 body {
   background: linear-gradient(to right, blue 50%, white 50%);
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
 }
 
 .login1-description {
@@ -7,20 +11,25 @@ body {
   color: rgba(255, 255, 255, 0.89);
   font-size: 20px;
   position: absolute;
-  top: -20px; 
+  margin-top: -350px;
+  right: 20%;
+  text-align: center;
 }
 
 .sign-up-container {
+  margin-top: 300px;
   position: relative;
   display: inline-block;
+  text-align: center;
 }
 
 .signup-img {
   width: 500px;
+  height: 500px;
   border: 0;
-  mix-blend-mode:multiply;
-  opacity: 1;
-  
+  margin-top: -80px;
+  max-width: 100%; 
+  height: auto;
 }
 
 .terms {
@@ -66,4 +75,102 @@ select {
 
 #submit {
   cursor: pointer;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For tablets and larger phones (max-width: 1024px) */
+@media screen and (max-width: 1024px) {
+  .login1-description {
+    font-size: 18px;
+    margin-top: -300px;
+    right: 10%;
+  }
+
+  .signup-img {
+    width: 400px;
+    margin-top: -60px;
+  }
+
+  .choose {
+    width: 100px;
+    font-size: 10px;
+    padding: 5px;
+  }
+}
+
+/* For mobile phones (max-width: 768px) */
+@media screen and (max-width: 768px) {
+  body {
+    background: linear-gradient(to bottom, blue 50%, white 50%);
+  }
+
+  .login1-description {
+    font-size: 16px;
+    margin-top: -250px;
+    right: 5%;
+  }
+
+  .signup-img {
+    display: none;
+  }
+
+  .login1-description {
+    width: 200px;
+    font-weight: bolder;
+    color: rgba(255, 255, 255, 0.89);
+    font-size: 14px;
+    text-align: center;
+    margin: 50px;
+  }
+
+
+  .sign-up-container {
+    margin-top: 200px;
+  }
+
+  .choose {
+    width: 90px;
+    font-size: 9px;
+    padding: 3px;
+  }
+}
+
+/* For small mobile devices (max-width: 480px) */
+@media screen and (max-width: 480px) {
+  .login1-description {
+    font-size: 14px;
+    margin-top: -200px;
+    text-align: center;
+    right: auto;
+    left: 0;
+    width: 100%;
+  }
+
+  .signup-img {
+    width: 250px;
+    margin-top: -20px;
+  }
+
+  .choose {
+    width: 80px;
+    font-size: 8px;
+    padding: 2px;
+  }
+
+  .sign-up-container {
+    margin-top: 150px;
+  }
+
+  .choose {
+    width: 120px;
+    background-color: white;
+    padding: 5px 10px;
+    color: gray;
+    font-size: 12px;
+    margin-left: 10px;
+    border: 1px solid #3851ddda;
+    border-radius: 5px;
+  }
+  
 }
