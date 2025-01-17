@@ -223,8 +223,13 @@ body {
 @media screen and (max-width: 768px) {
   .top-navbar {
     width: 100%;
-    left: 0;
+    left: 0px;
     padding: 10px;
+    margin: 0 18px;
+  }
+
+  .main-content {
+    margin-top: 30%;
   }
 
   .col-2 {

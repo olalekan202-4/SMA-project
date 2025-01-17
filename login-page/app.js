@@ -37,13 +37,12 @@ passwordField.addEventListener("input", function () {
   }
 });
 
+// Helper functions
 const handleDisplayError = (inputName, validationType = "default") => {
   if (validationType === "default")
     return (errorMsg.innerHTML = `${inputName} is missing, kindly input and continue`);
   if (validationType === "email")
     return (errorMsg.innerHTML = `${inputName} type is invalid, kindly input a valid ${inputName}!`);
-  if (validationType === "password")
-    return (errorMsg.innerHTML = `${inputName} must have a minimum of 8 characters, including at least one uppercase letter, one lowercase letter, one digit, and one special character.`);
 };
 
 const handleClearError = () => {
@@ -54,53 +53,57 @@ const handleRedirection = (redirectUrl) => {
   window.location = redirectUrl;
 };
 
-const details = {
-  emailInput: document.querySelector("#email").value, // Example
-  passwordInput: document.querySelector("#password").value,
+const handleSaveToLocalStorage = (data) => {
+  localStorage.setItem("user_token", data.token); // Save the token for future requests
+  localStorage.setItem("user_data", JSON.stringify(data.user)); // Save user details
 };
 
-
-const handleSaveSession = (details) => {
-  localStorage.setItem("current_user_email", details.emailInput); // Save email for the logged-in user
-  localStorage.setItem("present_session", JSON.stringify(details)); // Optionally save entire user details
+// Validate email
+const validateEmail = (email) => {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
 };
-console.log("Details object:", details);
-console.log("Email Input:", details.emailInput);
-
-
 
 // Handle Login Form Submission
 loginSubmit.addEventListener("click", async function (e) {
   e.preventDefault();
 
+  const email = emailInput.value.trim().toLowerCase();
+  const password = passwordField.value.trim();
+
   // Input validation
-  if (emailInput.value === "") return handleDisplayError("Email");
-  if (passwordField.value === "") return handleDisplayError("Password");
+  if (!email) return handleDisplayError("Email");
+  if (!validateEmail(email)) return handleDisplayError("Email", "email");
+  if (!password) return handleDisplayError("Password");
 
   // Form data
   const loginData = {
-    email: emailInput.value.trim().toLowerCase(),
-    password: passwordField.value.trim(),
+    email: email,
+    password: password,
   };
 
   try {
-    // API call
-    const response = await fetch("https://techcrush-subscription-management-app-api.onrender.com/api/v1/auth/login", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(loginData),
-    });
+    // API call to log in the user
+    const response = await fetch(
+      "https://techcrush-subscription-management-app-api.onrender.com/api/v1/auth/login",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(loginData),
+      }
+    );
 
     const data = await response.json();
-    console.log(data);
 
-    // Handle response
     if (!response.ok) throw new Error(data.message || "Login failed");
 
+    // Save user data to localStorage
+    handleSaveToLocalStorage(data);
+
+    // Redirect to dashboard
     handleClearError();
     alert("Login successful, Redirecting you to Dashboard...");
-    handleSaveSession(data); // Save user data to localStorage
-    handleRedirection("../dashboard-page/index.html"); // Redirect to dashboard
+    handleRedirection("../dashboard-page/index.html");
   } catch (error) {
     errorMsg.style.color = "red";
     errorMsg.innerHTML = error.message || "Something went wrong. Please try again.";
@@ -111,23 +114,24 @@ loginSubmit.addEventListener("click", async function (e) {
 forgetPassword.addEventListener("click", async function (e) {
   e.preventDefault();
 
-  // Input validation for email
-  if (emailInput.value === "") {
+  const email = emailInput.value.trim().toLowerCase();
+  if (!email) {
     return handleDisplayError("Email");
   }
 
   try {
-    // API call to forgotPassword
-    const response = await fetch("https://techcrush-subscription-management-app-api.onrender.com/api/v1/auth/forgotPassword", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ email: emailInput.value }),
-    });
+    // API call to send forgot password email
+    const response = await fetch(
+      "https://techcrush-subscription-management-app-api.onrender.com/api/v1/auth/forgotPassword",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: email }),
+      }
+    );
 
     const data = await response.json();
-    console.log(data);
 
-    // Handle response
     if (!response.ok) throw new Error(data.message || "Failed to send reset password email.");
 
     errorMsg.style.color = "green";
@@ -137,4 +141,3 @@ forgetPassword.addEventListener("click", async function (e) {
     errorMsg.innerHTML = error.message || "Something went wrong. Please try again.";
   }
 });
-

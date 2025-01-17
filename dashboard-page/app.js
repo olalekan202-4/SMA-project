@@ -1,52 +1,21 @@
-window.onload = async () => {
+window.onload = () => {
   try {
-    // Assume the user has entered login credentials (email and password).
-    const email = "user@example.com";  // Example email (replace with actual value).
-    const password = "userPassword";   // Example password (replace with actual value).
+    // Retrieve user data from localStorage
+    const userToken = localStorage.getItem("user_token");
+    const userData = localStorage.getItem("user_data");
 
-    // Make a login request to the API to retrieve the token
-    const loginResponse = await fetch("https://techcrush-subscription-management-app-api.onrender.com/api/v1/auth/login", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({ email, password }),
-    });
+    console.log(userToken)
 
-    if (!loginResponse.ok) {
-      throw new Error(`Login failed: ${loginResponse.statusText}`);
+    if (!userToken || !userData) {
+      throw new Error("User is not logged in or data is missing.");
     }
 
-    const loginData = await loginResponse.json();
-    const userToken = loginData.token;  // Assuming the token is in the 'token' field
+    // Parse the user data
+    const user = JSON.parse(userData);
 
-    // Store the token in localStorage (or another appropriate storage method)
-    localStorage.setItem("user_token", userToken);
-
-    // Fetch user data from the dashboard API using the retrieved token
-    const dashboardResponse = await fetch(
-      "https://techcrush-subscription-management-app-api.onrender.com/api/v1/user/dashboard",
-      {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: `Bearer ${userToken}`, // Use the retrieved token
-        },
-      }
-    );
-
-    if (!dashboardResponse.ok) {
-      throw new Error(`Error fetching user data: ${dashboardResponse.statusText}`);
-    }
-
-    const dashboardData = await dashboardResponse.json();
-    console.log("Dashboard Data:", dashboardData);
-
-    // Extract first and last name from the response data (adjust if needed)
-    const user = dashboardData.user;
-    if (!user || !user.firstName || !user.lastName) {
-      alert("User data is incomplete.");
-      return;
+    // Validate user data structure
+    if (!user.firstName || !user.lastName) {
+      throw new Error("User data is incomplete.");
     }
 
     // Capitalize and display the first and last name
@@ -63,10 +32,12 @@ window.onload = async () => {
       username2Element.textContent = `${firstName} ${lastName},`;
     } else {
       console.error("Username elements not found in the DOM.");
+      alert("Sorry, we couldn't display your name. Please try refreshing the page.");
     }
-
   } catch (error) {
-    console.error("Error:", error);
-    alert("An error occurred. Please try again later.");
+    console.error("Error:", error.message);
+    alert("An error occurred: " + error.message);
+    // Redirect to login page if there's an error
+    // window.location = "../login-page/index.html";
   }
 };

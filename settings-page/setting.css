@@ -1,15 +1,15 @@
+/* General Styles */
 .main-content {
   border: 1px solid #e0e0e0;
   padding: 30px;
 }
 
-.sub-content{
+.sub-content {
   border: 1px solid #e0e0e0;
   padding: 30px;
   border-radius: 15px;
   margin-top: 10px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-
 }
 
 .setting-head {
@@ -21,7 +21,6 @@
 #edit-profile {
   font-weight: 600;
   font-size: 1.2rem;
-
 }
 
 .settings-sub {
@@ -47,6 +46,7 @@
   font-weight: 600;
   font-size: 1.2rem;
 }
+
 .settings-input input {
   padding: 8px 50px;
   border: 1px solid #e0e0e0;
@@ -67,7 +67,6 @@
 .save-changes {
   text-align: center;
   padding: 30px;
-  
 }
 
 .button-save {
@@ -79,4 +78,111 @@
   border: 0 solid;
   border-radius: 15px;
   background-color: rgba(0, 0, 255, 0.473);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+  .setting-head {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .main-content, .sub-content {
+    padding: 20px;
+  }
+
+  .settings-form {
+    margin: 0 20px;
+  }
+
+  .settings-input {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .settings-input label {
+    font-size: 1rem;
+  }
+
+  .settings-input input {
+    padding: 8px 20px;
+  }
+
+  .settings-input button {
+    font-size: 1rem;
+    padding: 10px 30px;
+  }
+
+  .button-save {
+    font-size: 1rem;
+    padding: 10px 40px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .setting-head {
+    padding: 15px;
+  }
+
+  .main-content, .sub-content {
+    padding: 15px;
+  }
+
+  .settings-form {
+    margin: 0 10px;
+  }
+
+  .settings-input input {
+    padding: 8px 20px;
+  }
+
+  .settings-input button {
+    font-size: 1rem;
+    padding: 10px 25px;
+  }
+
+  .button-save {
+    font-size: 1rem;
+    padding: 10px 30px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .setting-head {
+    padding: 10px;
+    gap: 10px;
+  }
+
+  .main-content, .sub-content {
+    padding: 10px;
+  }
+
+  .settings-form {
+    margin: 0 5px;
+  }
+
+  .settings-input {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .settings-input label {
+    font-size: 1rem;
+  }
+
+  .settings-input input {
+    width: 100%;
+    padding: 8px 20px;
+  }
+
+  .settings-input button {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .button-save {
+    font-size: 1rem;
+    padding: 10px 30px;
+  }
 }
