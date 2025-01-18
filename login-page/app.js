@@ -1,89 +1,72 @@
+// DOM Element References
 const hiddenPassword = document.getElementById("hidden-password");
 const passwordField = document.getElementById("password");
 const passwordImage = document.getElementById("password-image");
 const loginSubmit = document.querySelector("#submit-login");
 const errorMsg = document.querySelector("#error");
 const forgetPassword = document.querySelector("#forget-password");
-
-// Toggle password visibility
-hiddenPassword.addEventListener("click", function () {
-  if (passwordField.type === "password") {
-    passwordField.type = "text";
-    hiddenPassword.src = "./login-page/IMAGE/password-view-icon.png"; // Change to view icon
-  } else {
-    passwordField.type = "password";
-    hiddenPassword.src = "./login-page/IMAGE/password-hidden-icon.png"; // Change back to hidden icon
-  }
-});
-
 const emailInput = document.getElementById("email");
 const emailIcon = document.getElementById("email-image");
 
-// Add an event listener to detect input for email
-emailInput.addEventListener("input", function () {
-  if (emailInput.value.length > 0) {
-    emailIcon.classList.add("hidden"); // Hide the email icon
-  } else {
-    emailIcon.classList.remove("hidden"); // Show the email icon if the field is empty
-  }
+// Toggle Password Visibility
+hiddenPassword.addEventListener("click", () => {
+  const isPasswordHidden = passwordField.type === "password";
+  passwordField.type = isPasswordHidden ? "text" : "password";
+  hiddenPassword.src = isPasswordHidden
+    ? "./login-page/IMAGE/password-view-icon.png" // View icon
+    : "./login-page/IMAGE/password-hidden-icon.png"; // Hidden icon
 });
 
-// Add an event listener to detect input for password
-passwordField.addEventListener("input", function () {
-  if (passwordField.value.length > 0) {
-    passwordImage.classList.add("hidden"); // Hide the password icon
-  } else {
-    passwordImage.classList.remove("hidden"); // Show the password icon if the field is empty
-  }
+// Hide/Show Email Icon Based on Input
+emailInput.addEventListener("input", () => {
+  emailIcon.classList.toggle("hidden", emailInput.value.length > 0);
 });
 
-// Helper functions
+// Hide/Show Password Icon Based on Input
+passwordField.addEventListener("input", () => {
+  passwordImage.classList.toggle("hidden", passwordField.value.length > 0);
+});
+
+// Helper Functions
 const handleDisplayError = (inputName, validationType = "default") => {
-  if (validationType === "default")
-    return (errorMsg.innerHTML = `${inputName} is missing, kindly input and continue`);
-  if (validationType === "email")
-    return (errorMsg.innerHTML = `${inputName} type is invalid, kindly input a valid ${inputName}!`);
+  const errorMessage =
+    validationType === "email"
+      ? `${inputName} type is invalid, kindly input a valid ${inputName}!`
+      : `${inputName} is missing, kindly input and continue`;
+  errorMsg.textContent = errorMessage;
 };
 
 const handleClearError = () => {
-  errorMsg.innerHTML = "";
+  errorMsg.textContent = "";
 };
 
-const handleRedirection = (redirectUrl) => {
-  window.location = redirectUrl;
+const handleRedirection = (redirectPath) => {
+  const repoName = "SMA-project";
+  const fullRedirectPath = `/${repoName}${redirectPath}`;
+  window.location.href = fullRedirectPath;
 };
 
 const handleSaveToLocalStorage = (data) => {
-  localStorage.setItem("user_token", data.token); // Save the token for future requests
-  localStorage.setItem("user_data", JSON.stringify(data.user)); // Save user details
+  localStorage.setItem("user_token", data.token);
+  localStorage.setItem("user_data", JSON.stringify(data.user));
 };
 
-// Validate email
-const validateEmail = (email) => {
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  return emailRegex.test(email);
-};
+const validateEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
 // Handle Login Form Submission
-loginSubmit.addEventListener("click", async function (e) {
+loginSubmit.addEventListener("click", async (e) => {
   e.preventDefault();
 
   const email = emailInput.value.trim().toLowerCase();
   const password = passwordField.value.trim();
 
-  // Input validation
   if (!email) return handleDisplayError("Email");
   if (!validateEmail(email)) return handleDisplayError("Email", "email");
   if (!password) return handleDisplayError("Password");
 
-  // Form data
-  const loginData = {
-    email: email,
-    password: password,
-  };
+  const loginData = { email, password };
 
   try {
-    // API call to log in the user
     const response = await fetch(
       "https://techcrush-subscription-management-app-api.onrender.com/api/v1/auth/login",
       {
@@ -94,50 +77,43 @@ loginSubmit.addEventListener("click", async function (e) {
     );
 
     const data = await response.json();
-
     if (!response.ok) throw new Error(data.message || "Login failed");
 
-    // Save user data to localStorage
     handleSaveToLocalStorage(data);
 
-    // Redirect to dashboard
     handleClearError();
-    alert("Login successful, Redirecting you to Dashboard...");
-    handleRedirection("../indexD.html");
+    alert("Login successful! Redirecting you to the Dashboard...");
+    handleRedirection("/indexD.html"); // Redirect to dashboard page
   } catch (error) {
     errorMsg.style.color = "red";
-    errorMsg.innerHTML = error.message || "Something went wrong. Please try again.";
+    errorMsg.textContent = error.message || "Something went wrong. Please try again.";
   }
 });
 
 // Handle Forgot Password
-forgetPassword.addEventListener("click", async function (e) {
+forgetPassword.addEventListener("click", async (e) => {
   e.preventDefault();
 
   const email = emailInput.value.trim().toLowerCase();
-  if (!email) {
-    return handleDisplayError("Email");
-  }
+  if (!email) return handleDisplayError("Email");
 
   try {
-    // API call to send forgot password email
     const response = await fetch(
       "https://techcrush-subscription-management-app-api.onrender.com/api/v1/auth/forgotPassword",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: email }),
+        body: JSON.stringify({ email }),
       }
     );
 
     const data = await response.json();
-
     if (!response.ok) throw new Error(data.message || "Failed to send reset password email.");
 
     errorMsg.style.color = "green";
-    errorMsg.innerHTML = "Password reset email sent! Check your inbox.";
+    errorMsg.textContent = "Password reset email sent! Check your inbox.";
   } catch (error) {
     errorMsg.style.color = "red";
-    errorMsg.innerHTML = error.message || "Something went wrong. Please try again.";
+    errorMsg.textContent = error.message || "Something went wrong. Please try again.";
   }
 });
