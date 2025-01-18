@@ -164,3 +164,24 @@ body::before {
   text-align: center;
   margin-left: 450px;
 }
+
+.sub-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 10px;
+}
+
+.track {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.sub-track {
+  width: 250px;
+  text-align: center;
+  font-weight: 500;
+  font-size: 12px;
+  margin-left: 40px;
+}
