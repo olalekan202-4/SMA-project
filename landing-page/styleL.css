@@ -1,0 +1,166 @@
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background-color: white;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Create the curved blue section */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60vw; /* 60% of the screen width */
+  height: 100vh; /* 100% of the screen height */
+  background-color: #A3AFEF;
+  border-top-left-radius: 100% 60%; /* Creates a curve from top-right like a diameter */
+  z-index: -1; /* Make sure it stays behind the content */
+}
+
+/* Top navbar container */
+.top-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+  color: white;
+  margin-left: 20px;
+}
+
+/* Logo section */
+.logo {
+  font-weight: bolder;
+  font-size: 18px;
+  width: fit-content;
+  border: 3px solid #3851DD;
+  color: #3851DD;
+  padding: 5px;
+}
+
+
+/* Navigation links section (center) */
+.nav-links {
+  flex-grow: 2; /* This will allow the nav links to take up space in the middle */
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.nav-links ul {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 16px;
+}
+
+.nav-links a:hover {
+  color: #f0f0f0;
+}
+
+/* Authentication links section (right) */
+.auth-links {
+  display: flex;
+  align-items: center;
+}
+
+.auth-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  padding: 8px 15px;
+  border-radius: 5px;
+  border: 1px solid transparent;
+}
+
+.auth-links a:hover {
+  background-color: #444;
+}
+
+.auth-links .login-btn {
+  background-color: blue;
+  border-color: #007bff;
+  color: white;
+  padding: 5px 20px;
+  font-weight: bold;
+}
+
+.auth-links .signup-btn {
+  background-color: rgba(255, 255, 255, 0.336);
+  color:  #3851DD;
+  border: 1px solid #3851DD;
+  padding: 5px 20px;
+  font-weight: 500;
+
+}
+
+.auth-links a:hover {
+  color: white;
+}
+
+.first-content {
+  display: flex;
+  justify-content: start;
+  padding: 10px;
+  margin-top: 50px;
+  margin-left: 80px;
+  gap: 30px;
+}
+
+.sub-first-content {
+  width: 500px;
+}
+
+.your-money {
+  font-weight: bolder;
+  font-size: 60px;
+}
+
+.effort {
+  font-weight: 500;
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.589);
+}
+
+.button-demo {
+  padding: 10px;
+  text-align: center;
+}
+
+.demo {
+  padding: 12px 60px;
+  border: 0;
+  color: white;
+  background-color: blue;
+  font-size: 10px;
+  border-radius: 10px;
+}
+
+.sub-descript {
+  font-weight: bold;
+  font-size: 18px;
+  width: 400px;
+  text-align: center;
+  margin-left: 450px;
+}
