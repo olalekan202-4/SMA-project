@@ -17,10 +17,10 @@ const form = document.getElementById('form');
 
 // hidden password field
 hiddenPassword.addEventListener('click', function (e) {
-  if (hiddenPassword.src === "../login-page/IMAGE/password-hidden-icon.png") {
-    hiddenPassword.src= "../login-page/IMAGE/password-hidden-icon.png"; // Change to second image
+  if (hiddenPassword.src === "./login-page/IMAGE/password-hidden-icon.png") {
+    hiddenPassword.src= "./login-page/IMAGE/password-hidden-icon.png"; // Change to second image
   } else {
-    hiddenPassword.src = "../login-page/IMAGE/password-view-icon.png"; // Change back to first image
+    hiddenPassword.src = "./login-page/IMAGE/password-view-icon.png"; // Change back to first image
   }
 
   if (password.type === "password") {

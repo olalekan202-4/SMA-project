@@ -1,17 +1,15 @@
 window.onload = () => {
   try {
     // Retrieve user data from localStorage
-    const userToken = localStorage.getItem("user_token");
-    const userData = localStorage.getItem("user_data");
+    const userStorage = localStorage.getItem("user_storage");
 
-    console.log(userToken)
-
-    if (!userToken || !userData) {
-      throw new Error("User is not logged in or data is missing.");
+    if (!userStorage) {
+      throw new Error("User is not logged in or user data is missing.");
     }
 
-    // Parse the user data
-    const user = JSON.parse(userData);
+    // Parse the user data (assuming the most recent user is the first in the array)
+    const users = JSON.parse(userStorage);
+    const user = users[0]; // Get the latest user from the storage
 
     // Validate user data structure
     if (!user.firstName || !user.lastName) {
@@ -38,6 +36,6 @@ window.onload = () => {
     console.error("Error:", error.message);
     alert("An error occurred: " + error.message);
     // Redirect to login page if there's an error
-    // window.location = "../index.html";
+    window.location.href = "/SMA-project/index.html"; // Update with your GitHub Pages path
   }
 };
