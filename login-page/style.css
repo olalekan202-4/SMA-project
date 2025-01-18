@@ -185,7 +185,7 @@ input::placeholder {
   }
 
   .sub-container {
-    width: 90%;
+    width: fit-content;
     padding: 20px;
     margin-top: 50px;
   }
@@ -196,9 +196,6 @@ input::placeholder {
     left: 15%;
   }
 
-  .sub-container {
-    margin-top: 50px;
-  }
 
   input {
     width: 250px;
@@ -225,7 +222,7 @@ input::placeholder {
   }
 
   .sub-container {
-    width: 85%; /* Adjust width further for mobile screens */
+    width: fit-content; /* Adjust width further for mobile screens */
     padding: 15px;
     margin-top: 30px;
   }
