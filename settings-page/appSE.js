@@ -22,6 +22,10 @@ profilePictureInput.addEventListener("change", function (event) {
       const base64Image = e.target.result;
       localStorage.setItem("profile_picture", base64Image);
       alert("Profile picture updated successfully!");
+      
+      // Optionally, trigger an event or callback to update the navbar
+      const navbarPicture = new Event("updateNavbarPicture");
+      window.dispatchEvent(navbarPicture);  // Trigger update for navbar
     };
     reader.readAsDataURL(file);
   }
