@@ -193,11 +193,11 @@ body {
 
 .alert-div {
   position: absolute;
-  top: -5px;
-  right: 0px;
+  top: 5px;
+  right: 4px;
   background-color: red;
-  width: 10px;
-  height: 10px;
+  width: 5px;
+  height: 5px;
   border-radius: 50%;
 }
 
