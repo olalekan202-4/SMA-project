@@ -22,7 +22,7 @@ body::before {
   top: 0;
   right: 0;
   width: 60vw; /* 60% of the screen width */
-  height: 300vh; /* 100% of the screen height */
+  height: 400vh; /* 100% of the screen height */
   background-color: #A3AFEF;
   border-top-left-radius: 100% 60%; /* Creates a curve from top-right like a diameter */
   z-index: -1; /* Make sure it stays behind the content */
@@ -158,10 +158,11 @@ body::before {
 
 .sub-descript {
   font-weight: bold;
-  font-size: 18px;
-  width: 400px;
+  font-size: 20px;
+  width: 450px;
   text-align: center;
   margin-left: 450px;
+  padding: 20px;
 }
 
 .sub-section {
@@ -188,4 +189,20 @@ body::before {
 .second-track {
   margin-top: 150px;
   margin-left: 40px;
+}
+
+.sub-descript1 {
+  font-weight: 500;
+  font-size: 12px;
+  width: 450px;
+  text-align: center;
+  margin-left: 450px;
+  margin-top: -15px;
+  color: rgba(0, 0, 0, 0.623);
+}
+
+.pricing-section {
+  display: flex;
+  justify-content: start;
+  gap: 10px;
 }
