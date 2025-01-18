@@ -163,11 +163,18 @@ password.addEventListener("input", function(e) {
   handleValidatePassword(pass);
 })
 
+const handleRedirection = (redirectPath) => {
+  // Adjust for GitHub Pages by adding repository name
+  const repoName = "SMA-project"; // Your GitHub repository name
+  const fullRedirectPath = `/${repoName}${redirectPath}`;
+  window.location.href = fullRedirectPath;
+};
 
 
 
 submit.addEventListener("click", async function (e) {
   e.preventDefault();
+
   if (!username.value) return handleDisplayError("First Name");
   if (!username2.value) return handleDisplayError("Last Name");
   if (!email.value || !emailRegex.test(email.value)) return handleDisplayError("Email", "email");
@@ -187,24 +194,30 @@ submit.addEventListener("click", async function (e) {
   };
 
   try {
-    const response = await fetch("https://techcrush-subscription-management-app-api.onrender.com/api/v1/auth/signup", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formObj),
-    });
+    const response = await fetch(
+      "https://techcrush-subscription-management-app-api.onrender.com/api/v1/auth/signup",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formObj),
+      }
+    );
+
     const data = await response.json();
-    console.log(data);
     if (!response.ok) throw new Error(data.message || "Signup failed (Email already registered).");
 
     errorMsg.style.color = "green";
-    errorMsg.textContent = "Signup successful! Redirecting...";
+    errorMsg.textContent = "Signup successful! Redirecting to login page...";
     handleSaveToStorage(formObj);
-    setTimeout(() => (window.location.href = "../index.html"), 2000);
+
+    // Redirect to login page
+    setTimeout(() => handleRedirection("/index.html"), 2000); // Update the path to GitHub Pages login page
   } catch (error) {
     errorMsg.style.color = "red";
     errorMsg.textContent = error.message || "Something went wrong.";
   }
 });
+
 
 // /////////// // setTimeout(() => (window.location.href = "../login-page/index.html"));//////////////////////////////saving to storage ////////////////////////////////
 const handleSaveToStorage = (formObj) => {
