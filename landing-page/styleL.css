@@ -203,6 +203,13 @@ body::before {
 
 .pricing-section {
   display: flex;
-  justify-content: start;
-  gap: 10px;
+  justify-content: space-between;
+  padding: 40px;
+}
+
+.pricing {
+  background-color: #EBEEFC;
+  padding: 10px 20px;
+  border: 1px solid #EBEEFC;
+  border-radius: 15px;
 }
