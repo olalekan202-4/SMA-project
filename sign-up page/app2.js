@@ -175,6 +175,7 @@ const handleRedirection = (redirectPath) => {
 submit.addEventListener("click", async function (e) {
   e.preventDefault();
 
+  // Validation checks
   if (!username.value) return handleDisplayError("First Name");
   if (!username2.value) return handleDisplayError("Last Name");
   if (!email.value || !emailRegex.test(email.value)) return handleDisplayError("Email", "email");
@@ -208,15 +209,20 @@ submit.addEventListener("click", async function (e) {
 
     errorMsg.style.color = "green";
     errorMsg.textContent = "Signup successful! Redirecting to login page...";
+
+    // Trigger the success alert
+    alert("Sign-up successful! Redirecting to the login page...");
+
     handleSaveToStorage(formObj);
 
-    // Redirect to login page
-    setTimeout(() => handleRedirection("/index.html"), 2000); // Update the path to GitHub Pages login page
+    // Redirect to login page after 2 seconds
+    setTimeout(() => handleRedirection("/index.html"), 2000); // Increase the timeout to 2 seconds to allow user to see the alert
   } catch (error) {
     errorMsg.style.color = "red";
     errorMsg.textContent = error.message || "Something went wrong.";
   }
 });
+
 
 
 // /////////// // setTimeout(() => (window.location.href = "../login-page/index.html"));//////////////////////////////saving to storage ////////////////////////////////
