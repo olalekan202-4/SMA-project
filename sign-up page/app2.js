@@ -35,7 +35,7 @@ hiddenPassword.addEventListener('click', function (e) {
 
 // hiddenPassword2
 hiddenPassword2.addEventListener('click', function (e) {
-  if (hiddenPassword2.src === "../login-page/IMAGE/password-hidden-icon.png") {
+  if (hiddenPassword2.src === "./login-page/IMAGE/password-hidden-icon.png") {
     hiddenPassword2.src= "../login-page/IMAGE/password-hidden-icon.png"; // Change to second image
   } else {
     hiddenPassword2.src = "../login-page/IMAGE/password-view-icon.png"; // Change back to first image
@@ -194,12 +194,12 @@ submit.addEventListener("click", async function (e) {
     });
     const data = await response.json();
     console.log(data);
-    if (!response.ok) throw new Error(data.message || "Signup failed");
+    if (!response.ok) throw new Error(data.message || "Signup failed (Email already registered).");
 
     errorMsg.style.color = "green";
     errorMsg.textContent = "Signup successful! Redirecting...";
     handleSaveToStorage(formObj);
-    setTimeout(() => (window.location.href = "../login-page/index.html"), 2000);
+    setTimeout(() => (window.location.href = "../index.html"), 2000);
   } catch (error) {
     errorMsg.style.color = "red";
     errorMsg.textContent = error.message || "Something went wrong.";

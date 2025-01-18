@@ -157,6 +157,7 @@ input::placeholder {
   color: rgb(139, 10, 10);
   margin: 0px 10px;
   font-size: 12px;
+  width: 300px;
 }
 
 /* Media Queries for Responsive Design */

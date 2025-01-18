@@ -9,10 +9,10 @@ const forgetPassword = document.querySelector("#forget-password");
 hiddenPassword.addEventListener("click", function () {
   if (passwordField.type === "password") {
     passwordField.type = "text";
-    hiddenPassword.src = "IMAGE/password-view-icon.png"; // Change to view icon
+    hiddenPassword.src = "./login-page/IMAGE/password-view-icon.png"; // Change to view icon
   } else {
     passwordField.type = "password";
-    hiddenPassword.src = "IMAGE/password-hidden-icon.png"; // Change back to hidden icon
+    hiddenPassword.src = "./login-page/IMAGE/password-hidden-icon.png"; // Change back to hidden icon
   }
 });
 
@@ -103,7 +103,7 @@ loginSubmit.addEventListener("click", async function (e) {
     // Redirect to dashboard
     handleClearError();
     alert("Login successful, Redirecting you to Dashboard...");
-    handleRedirection("../dashboard-page/index.html");
+    handleRedirection("../indexD.html");
   } catch (error) {
     errorMsg.style.color = "red";
     errorMsg.innerHTML = error.message || "Something went wrong. Please try again.";

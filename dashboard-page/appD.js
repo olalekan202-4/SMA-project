@@ -38,6 +38,6 @@ window.onload = () => {
     console.error("Error:", error.message);
     alert("An error occurred: " + error.message);
     // Redirect to login page if there's an error
-    // window.location = "../login-page/index.html";
+    // window.location = "../index.html";
   }
 };
