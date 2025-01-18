@@ -216,7 +216,7 @@ submit.addEventListener("click", async function (e) {
     handleSaveToStorage(formObj);
 
     // Redirect to login page after 2 seconds
-    setTimeout(() => handleRedirection("/index.html"), 2000); // Increase the timeout to 2 seconds to allow user to see the alert
+    setTimeout(() => handleRedirection("/index1.html"), 2000); // Increase the timeout to 2 seconds to allow user to see the alert
   } catch (error) {
     errorMsg.style.color = "red";
     errorMsg.textContent = error.message || "Something went wrong.";

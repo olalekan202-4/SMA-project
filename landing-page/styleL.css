@@ -6,14 +6,13 @@
 }
 
 body {
-  height: 100vh;
+  height: 500vh;
   background-color: white;
   font-family: 'Poppins', sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   position: relative;
-  overflow: hidden;
 }
 
 /* Create the curved blue section */
@@ -23,7 +22,7 @@ body::before {
   top: 0;
   right: 0;
   width: 60vw; /* 60% of the screen width */
-  height: 100vh; /* 100% of the screen height */
+  height: 300vh; /* 100% of the screen height */
   background-color: #A3AFEF;
   border-top-left-radius: 100% 60%; /* Creates a curve from top-right like a diameter */
   z-index: -1; /* Make sure it stays behind the content */
@@ -183,5 +182,10 @@ body::before {
   text-align: center;
   font-weight: 500;
   font-size: 12px;
+  margin-left: 40px;
+}
+
+.second-track {
+  margin-top: 150px;
   margin-left: 40px;
 }
