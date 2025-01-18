@@ -159,3 +159,4 @@ window.addEventListener("load", function () {
   const subscriptions = getSubscriptionsFromLocalStorage();
   renderSubscriptions(subscriptions);
 });
+
