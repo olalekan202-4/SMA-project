@@ -93,7 +93,7 @@ select {
   }
 
   .choose {
-    width: 100px;
+    width: fit-content;
     font-size: 10px;
     padding: 2px;
   }
@@ -131,7 +131,7 @@ select {
 
   .choose {
     width: fit-content;
-    font-size: 9px;
+    font-size: 10px;
     padding: 2px;
   }
 }
@@ -153,8 +153,8 @@ select {
   }
 
   .choose {
-    width: 80px;
-    font-size: 8px;
+    width: fit-content;
+    font-size: 10px;
     padding: 2px;
   }
 
