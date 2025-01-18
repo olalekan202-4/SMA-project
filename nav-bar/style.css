@@ -164,9 +164,8 @@ body {
 }
 
 .search {
-  padding: 8px 50px;
+  padding: 8px 80px;
   border: 1px solid #6074E4;
-  background-color: #6074e42a;;
   border-radius: 15px;
   font-size: 0.9rem;
 }
@@ -187,9 +186,9 @@ body {
   align-items: center;
   gap: 5px;
   padding: 5px;
-  border: 1px solid #6074E4;
-  background-color: #6074e42a;;
-  border-radius: 15px;
+  /* border: 0px solid #6074E4;
+  background-color: #6074e42a;
+  border-radius: 15px; */
 }
 
 .alert-div {
@@ -217,6 +216,10 @@ body {
   padding: 20px;
   margin-top: 9%;
   overflow-y: auto;
+}
+
+#log-out {
+  margin-top: 150px;
 }
 
 /* Responsive Design */
