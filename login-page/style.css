@@ -6,15 +6,6 @@ body {
   background: linear-gradient(to right, #3851ddda 50%, white 50%);
 }
 
-.tsma2 {
-  position: absolute;
-  font-weight: bold;
-  color: white;
-  font-size: 30px;
-  top: 30px;
-  left: 30px;
- 
-}
 
 .main-container {
   display: flex;
