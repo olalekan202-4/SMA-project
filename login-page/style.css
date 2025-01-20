@@ -204,6 +204,16 @@ input::placeholder {
   .login-btn {
     width: 270px;
   }
+
+  .password-icon-container {
+    top: 11px;
+    left: 20px;
+  }
+  
+  .password-hidden-container {
+    top: 11px;
+    right: 10px;
+  }
 }
 
 /* For devices with width 768px or smaller */
