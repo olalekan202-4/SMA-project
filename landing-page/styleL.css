@@ -340,7 +340,7 @@ body::before {
     justify-self: center;
     gap: 100px;
     width: 500px;
-    margin-right: 2%;
+    margin-left: 5%;
   }
 
   .button-plan {
@@ -381,7 +381,7 @@ body::before {
     justify-self: center;
     gap: 100px;
     width: 500px;
-    margin-right: 2%;
+    margin-left: 10%;
   }
 
   .button-plan {
