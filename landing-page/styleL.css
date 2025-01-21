@@ -256,12 +256,16 @@ body::before {
 }
 
 .button-upgrade {
-  padding: 4px 50px;
+  padding: 15px 90px;
   font-weight: 500;
   color: white;
   background-color: #3851DD;
   border: 1px solid #3851DD;
-  border-radius: 5px;
+  border-radius: 10px;
+}
+
+#upgrade-enterprise {
+  padding: 15px 80px;
 }
 
 #basic {
@@ -278,14 +282,19 @@ body::before {
 
 .most-popular-text {
   font-size: 10px;
+  font-weight: bold;
   position: absolute;
   color: white;
   border: 1px solid blue;
-  background-color: blue;
+  background-color: #101B6D;
   padding: 2px 15px;
   border-radius: 15px;
   top: -10px;
   left: 40px;
+}
+
+.img-list {
+  margin-right: 10px;
 }
 
 
