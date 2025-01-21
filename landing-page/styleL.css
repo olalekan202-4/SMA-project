@@ -165,7 +165,7 @@ body::before {
   font-size: 30px;
   width: 600px;
   text-align: center;
-  margin-left: 450px;
+  margin-left: 27%;
   padding: 20px;
 }
 
@@ -196,11 +196,11 @@ body::before {
 }
 
 .sub-descript1 {
-  font-weight: 500;
+  font-weight: bold;
   font-size: 12px;
   width: 450px;
   text-align: center;
-  margin-left: 450px;
+  margin-left: 32%;
   margin-top: -15px;
   color: rgba(0, 0, 0, 0.623);
 }
