@@ -22,7 +22,7 @@ body::before {
   top: 0;
   right: 0;
   width: 60vw; /* 60% of the screen width */
-  height: 400vh; /* 100% of the screen height */
+  height: 600vh; /* 100% of the screen height */
   background-color: #A3AFEF;
   border-top-left-radius: 100% 60%; /* Creates a curve from top-right like a diameter */
   z-index: -1; /* Make sure it stays behind the content */
@@ -162,8 +162,8 @@ body::before {
 
 .sub-descript {
   font-weight: bold;
-  font-size: 20px;
-  width: 450px;
+  font-size: 30px;
+  width: 600px;
   text-align: center;
   margin-left: 450px;
   padding: 20px;
@@ -215,7 +215,7 @@ body::before {
 .pricing {
   background-color: #EBEEFC;
   padding: 10px 20px;
-  border: 1px solid #EBEEFC;
+  border: 1px solid black;
   border-radius: 15px;
 }
 
@@ -227,7 +227,7 @@ body::before {
 .plan-descript {
   text-decoration: underline;
   font-weight: bolder;
-  font-size: 18px;
+  font-size: 30px;
   padding: 10px;
   margin-top: 50px;
 }
@@ -245,6 +245,11 @@ body::before {
   margin-top: 50px;
 }
 
+.for {
+  font-weight: 500;
+  padding: 0 10px;
+}
+
 .button-plan {
   padding: 10px;
   text-align: center;
@@ -252,11 +257,47 @@ body::before {
 
 .button-upgrade {
   padding: 4px 50px;
-  color: rgba(255, 255, 255, 0.678);
+  font-weight: 500;
+  color: white;
   background-color: #3851DD;
   border: 1px solid #3851DD;
   border-radius: 5px;
 }
+
+#basic {
+  margin-top: 100px;
+  margin-bottom: -100px;
+ 
+}
+
+#most-popular {
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: -50px;
+}
+
+.most-popular-text {
+  font-size: 10px;
+  position: absolute;
+  color: white;
+  border: 1px solid blue;
+  background-color: blue;
+  padding: 2px 15px;
+  border-radius: 15px;
+  top: -10px;
+  left: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 @media screen and (max-width: 1024px) {
   body {
@@ -276,7 +317,7 @@ body::before {
     top: 0;
     right: 0;
     width: 60vw; /* 60% of the screen width */
-    height: 400vh; /* 100% of the screen height */
+    height: 600vh; /* 100% of the screen height */
     background-color: #A3AFEF;
     border-top-left-radius: 100% 60%; /* Creates a curve from top-right like a diameter */
     z-index: -1; /* Make sure it stays behind the content */
@@ -302,7 +343,7 @@ body::before {
     top: 0;
     right: -300px;
     width: 100vw; /* 60% of the screen width */
-    height: 400vh; /* 100% of the screen height */
+    height: 600vh; /* 100% of the screen height */
     background-color: #A3AFEF;
     border-top-left-radius: 100% 60%; /* Creates a curve from top-right like a diameter */
     z-index: -1; /* Make sure it stays behind the content */
