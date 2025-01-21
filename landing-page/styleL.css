@@ -300,8 +300,8 @@ body::before {
     content: "";
     position: absolute;
     top: 0;
-    right: 0;
-    width: 60vw; /* 60% of the screen width */
+    right: -300px;
+    width: 100vw; /* 60% of the screen width */
     height: 400vh; /* 100% of the screen height */
     background-color: #A3AFEF;
     border-top-left-radius: 100% 60%; /* Creates a curve from top-right like a diameter */
