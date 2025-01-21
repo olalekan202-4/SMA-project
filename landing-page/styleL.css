@@ -257,3 +257,33 @@ body::before {
   border: 1px solid #3851DD;
   border-radius: 5px;
 }
+
+@media screen and (max-width: 1024px) {
+  body {
+    height: 500vh;
+    background-color: white;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+  }
+  
+  /* Create the curved blue section */
+  body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60vw; /* 60% of the screen width */
+    height: 400vh; /* 100% of the screen height */
+    background-color: #A3AFEF;
+    border-top-left-radius: 100% 60%; /* Creates a curve from top-right like a diameter */
+    z-index: -1; /* Make sure it stays behind the content */
+  }
+
+}
+
+@media screen and (max-width: 768px) {
+
+}
