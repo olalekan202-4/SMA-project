@@ -340,6 +340,7 @@ body::before {
     justify-self: center;
     gap: 100px;
     width: 500px;
+    margin-right: 2%;
   }
 
   .button-plan {
@@ -377,7 +378,14 @@ body::before {
   .pricing-section {
     display: grid;
     grid-template-columns: 1fr;
+    justify-self: center;
     gap: 100px;
+    width: 500px;
+    margin-right: 2%;
+  }
+
+  .button-plan {
+    text-align: left;
   }
 
 }
