@@ -343,6 +343,10 @@ body::before {
     margin-left: 5%;
   }
 
+  .pricing {
+    margin-left: 5%;
+  }
+
   .button-plan {
     text-align: left;
   }
@@ -381,6 +385,10 @@ body::before {
     justify-self: center;
     gap: 100px;
     width: 500px;
+    margin-left: 10%;
+  }
+
+  .pricing {
     margin-left: 10%;
   }
 
