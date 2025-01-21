@@ -337,8 +337,16 @@ body::before {
   .pricing-section {
     display: grid;
     grid-template-columns: 1fr;
+    justify-self: center;
     gap: 100px;
+    width: 500px;
   }
+
+  .button-plan {
+    text-align: left;
+  }
+
+  
 
 }
 
