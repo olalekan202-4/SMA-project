@@ -331,6 +331,13 @@ body::before {
     border-top-left-radius: 100% 60%; /* Creates a curve from top-right like a diameter */
     z-index: -1; /* Make sure it stays behind the content */
   }
+  
+
+  .pricing-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 100px;
+  }
 
 }
 
@@ -356,6 +363,12 @@ body::before {
     background-color: #A3AFEF;
     border-top-left-radius: 100% 60%; /* Creates a curve from top-right like a diameter */
     z-index: -1; /* Make sure it stays behind the content */
+  }
+
+  .pricing-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 100px;
   }
 
 }
