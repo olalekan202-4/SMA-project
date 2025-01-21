@@ -252,11 +252,12 @@ body::before {
 
 .button-plan {
   padding: 10px;
+  font-size: 12px;
   text-align: center;
 }
 
 .button-upgrade {
-  padding: 15px 90px;
+  padding: 10px 70px;
   font-weight: 500;
   color: white;
   background-color: #3851DD;
@@ -265,7 +266,7 @@ body::before {
 }
 
 #upgrade-enterprise {
-  padding: 15px 80px;
+  padding: 15px 40px;
 }
 
 #basic {
