@@ -22,7 +22,7 @@ body::before {
   top: 0;
   right: 0;
   width: 60vw; /* 60% of the screen width */
-  height: 600vh; /* 100% of the screen height */
+  height: 500vh; /* 100% of the screen height */
   background-color: #A3AFEF;
   border-top-left-radius: 100% 60%; /* Creates a curve from top-right like a diameter */
   z-index: -1; /* Make sure it stays behind the content */
@@ -42,7 +42,7 @@ body::before {
 .logo {
   font-weight: bolder;
   font-size: 18px;
-  width: fit-content;
+  max-width: fit-content;
   border: 3px solid #3851DD;
   color: #3851DD;
   padding: 5px;
@@ -128,7 +128,7 @@ body::before {
 }
 
 .sub-first-content {
-  width: 500px;
+  max-width: 500px;
 }
 
 .your-money {
@@ -146,7 +146,7 @@ body::before {
   padding: 5px 20px;
   text-align: center;
   border: 1px solid blue;
-  width: 250px;
+  max-width: 250px;
   margin-top: 5%;
   margin-left: 30%;
   background-color: blue;
@@ -163,7 +163,7 @@ body::before {
 .sub-descript {
   font-weight: bold;
   font-size: 30px;
-  width: 600px;
+  max-width: 600px;
   text-align: center;
   margin-left: 27%;
   padding: 20px;
@@ -183,7 +183,7 @@ body::before {
 }
 
 .sub-track {
-  width: 250px;
+  max-width: 250px;
   text-align: center;
   font-weight: 500;
   font-size: 12px;
@@ -198,7 +198,7 @@ body::before {
 .sub-descript1 {
   font-weight: bold;
   font-size: 12px;
-  width: 450px;
+  max-width: 450px;
   text-align: center;
   margin-left: 32%;
   margin-top: -15px;
@@ -210,6 +210,7 @@ body::before {
   justify-content: space-between;
   padding: 40px;
   gap: 20px;
+  
 }
 
 .pricing {
@@ -217,6 +218,7 @@ body::before {
   padding: 10px 20px;
   border: 1px solid black;
   border-radius: 15px;
+  box-shadow: 0px 10px 17px rgb(120, 120, 223);
 }
 
 .amount-plan {
@@ -298,10 +300,127 @@ body::before {
   margin-right: 10px;
 }
 
+.frequent-question  {
+  padding: 20px;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 2.5rem;
+}
 
+.got-question {
+  text-align: center;
+  font-weight: 500;
+  line-height: 0;
+}
 
+.frequent-question-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  gap: 10px;
+  padding: 30px;
+}
 
+.add-sub-container {
+  grid-row: 2 span;
+}
 
+.sub-frq-container {
+  background-color: white;
+  border: 1px solid black;
+  padding: 20px;
+  box-shadow: gray 3px 3px;
+}
+
+.faq-script {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.sub-faq-script {
+  max-width: 450px;
+  margin-left: 20px;
+  padding: 25px;
+  font-size: 14px;
+  color: gray;
+}
+
+.footer-container {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 30px;
+}
+
+.foot-logo {
+  color: white;
+  max-width: fit-content;
+  max-height: fit-content;
+  border: 2px solid white;
+  padding: 5px 8px;
+  font-weight: bolder;
+  font-size: 18px;
+}
+
+.foot-head {
+  color: white;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.quick-links {
+  list-style: none;
+  color: white;
+}
+
+.quick-links a {
+  font-size: 12px;
+  text-decoration: none;
+  color: white;
+  margin-left: -32px;
+  font-weight: 500;
+}
+
+.mail-icon {
+ position: relative;
+ left: -30px;
+}
+
+.copyright {
+  color: white;
+  font-size: 10px;
+  padding: 10px;
+  font-weight: 400;
+}
+
+.foot-news {
+  color: white;
+  font-weight: bolder;
+  font-size: 25px;
+}
+
+.footer-input {
+  padding:1px 15px;
+  padding-bottom: 3px;
+  background-color: rgb(236, 233, 233);
+  border: 1px solid transparent;
+}
+
+.footer-input::placeholder {
+  font-size: 12px;
+}
+
+.foot-sub {
+  padding:5px 8px;
+  background: #FAD000;
+  border: 1px solid #FAD000;
+  color: black;
+  font-size: 12px;
+  margin-left: -14px;
+  
+}
 
 
 
@@ -339,7 +458,7 @@ body::before {
     grid-template-columns: 1fr;
     justify-self: center;
     gap: 100px;
-    width: 500px;
+    max-width: 500px;
     margin-left: 5%;
   }
 
@@ -384,7 +503,7 @@ body::before {
     grid-template-columns: 1fr;
     justify-self: center;
     gap: 100px;
-    width: 500px;
+    max-width: 500px;
     margin-left: 10%;
   }
 
