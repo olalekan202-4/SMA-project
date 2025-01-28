@@ -18,6 +18,15 @@ body {
   flex-wrap: wrap; /* Adjust layout for smaller screens */
 }
 
+.tsma2 {
+  position: absolute;
+  font-weight: bold;
+  color: white;
+  font-size: 30px;
+  top: 30px;
+  left: 30px;
+}
+
 .image-container {
   display: flex;
   align-items: center;

@@ -1,0 +1,13 @@
+.usage-analysis-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-around;
+}
+
+.hidden-fees {
+  grid-row: 3span;
+}
+
+.inactive-usage {
+  grid-column: 2span;
+}
