@@ -2,12 +2,37 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: space-around;
+  padding: 15px;
+  gap: 10px;
 }
 
 .hidden-fees {
   grid-row: 3span;
+  border: 1px solid blue;
+  border-radius: 15px;
+  padding: 10px;
 }
 
 .inactive-usage {
   grid-column: 2span;
+}
+
+.usage-active {
+  padding: 10px;
+  border: 1px solid green;
+  width: fit-content;
+  border-radius: 15px;
+}
+
+.usage-expired {
+  padding: 10px;
+  border: 1px solid red;
+  width: fit-content;
+  border-radius: 15px;
+}
+
+.inactive-usage {
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 255, 0.493);
+  width: fit-content;
 }
