@@ -1,0 +1,202 @@
+.select-plan {
+  font-weight: bold;
+  font-size: 18px;
+  padding: 10px 50px;
+}
+
+.payment-division {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* grid-template-rows: repeat(4, auto);  */
+  justify-content: space-between;
+  align-content: center;
+  gap: 30px;
+}
+
+.payment-options {
+  grid-row: span 4;
+}
+
+.premium {
+  padding: 20px 50px;
+  border: 1px solid black;
+  border-radius: 15px;
+  position: relative;
+}
+
+.premium ul {
+  padding: 10px 50px;
+  font-size: 12px;
+  font-weight: 600;
+  list-style:circle
+}
+
+.premium input {
+  position: absolute;
+  transform: scale(1.5);
+  top: 30%;
+  left: 5%;
+}
+
+.premium-option {
+  font-size: 20px;
+  font-weight: bold;
+  padding: 15px;
+  margin: 8px;
+}
+
+.premium-price {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.payment-options {
+  border: 1px solid blue;
+  padding: 20px 40px;
+  border-radius: 20px;
+  width: fit-content;
+  height: fit-content;
+  margin-left: 20px;
+  margin-top: 50px;
+}
+
+.sub-payment-opt {
+  font-size: 30px;
+  font-weight: bolder;
+  padding: 15px;
+  border-bottom: 2px solid rgba(128, 128, 128, 0.541);
+  line-height: 20px;
+}
+
+.pay-with {
+  font-weight: bold;
+  font-size: 18px;
+  padding: 5px 15px;
+}
+
+.payment-card {
+  padding: 5px 15px;
+  font-size: 14px;
+}
+
+.payment-card input {
+  margin-right: 10px;
+  margin-left: 5px;
+  transform: scale(1.2);
+}
+
+.payment-card label {
+  margin-left: -8px;
+  margin-right: 15px;
+  color: rgba(0, 0, 0, 0.603);
+}
+
+.card-number {
+  padding: 5px 15px;
+  position: relative;
+}
+
+.card-number label {
+  font-size: 14px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.603);
+}
+
+.card-number input {
+  width: 410px;
+  border: 0px;
+  background-color: rgba(128, 128, 128, 0.185);
+  padding: 8px 50px;
+}
+
+.card-number input::placeholder {
+  padding: 10px;
+}
+
+.image-1 {
+  position: absolute;
+  top: 35px;
+  left: 25px;
+}
+
+.image-2 {
+  position: absolute;
+  right: 38px;
+  top: 35px;
+}
+
+.expire-date-container {
+  display: flex;
+  gap: 10px;
+  padding: 5px 15px;
+}
+
+.expire-date-container label {
+  font-size: 14px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.603);
+}
+
+.expire-date-container input {
+  width: 200px;
+  border: 0px;
+  background-color: rgba(128, 128, 128, 0.185);
+  padding: 8px 20px;
+}
+
+.expire-date-container input::placeholder {
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.card-holder {
+  padding: 5px 15px;
+}
+
+.card-holder label {
+  font-size: 14px;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.603);
+}
+
+.card-holder input {
+  width: 410px;
+  border: 0px;
+  background-color: rgba(128, 128, 128, 0.185);
+  padding: 8px 20px;
+}
+
+.save-card {
+  padding: 5px 15px;
+}
+.save-card input {
+  transform: scale(1.5);
+  margin-right: 4px;
+}
+
+.save-card label {
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.603);
+}
+
+.submit-payment {
+  padding: 5px 15px;
+}
+
+.submit-payment button {
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: blue;
+  border-radius: 15px;
+  border: 0;
+  padding: 20px;
+  text-align: center;
+  width: 420px;
+}
+
+.payment-policy {
+  color: rgba(128, 128, 128, 0.767);
+  padding: 5px 15px;
+  font-size: 12px;
+}
