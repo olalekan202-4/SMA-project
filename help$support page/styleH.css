@@ -1,3 +1,7 @@
+.help-container-contain {
+  margin-top: 120px;
+}
+
 .help-content {
   display: flex;
   justify-content: space-around;
