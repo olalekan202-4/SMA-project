@@ -232,6 +232,10 @@ body {
     margin: 0 18px;
   }
 
+  .user-name {
+    display: none;
+  }
+
   .main-content {
     margin-top: 30%;
   }
